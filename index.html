@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<title>Document</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+	</head>
+	<body class="container px-10 py-5 bg-slate-100">
+		<!-- Navbar section  -->
+		<nav class="bg-white pb-3 px-3">
+			<div class="flex justify-between">
+				<div class="flex mt-4">
+					<i class="fa-solid fa-bars fa-lg mt-3 xl:hidden"></i>
+					<img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732049107/mjtj07ngvughbpiu38hd.png"
+						alt=""
+						class="h-7 bg-blue-500 mx-2 py-1 px-1 rounded-md shadow-md shadow-blue-400" />
+					<h1 class="text-blue-500 font-serif font-bold text-xl">Brand</h1>
+				</div>
+
+				<div
+					class="hidden xl:flex border-blue-500 border-2 rounded-md text-center h-full mt-4">
+					<input type="text" placeholder="Search" class="px-2 w-96 py-1" />
+					<select class="border-blue-400 border-l-2">
+						<option>All category</option>
+						<option>Electronics</option>
+						<option>Toys</option>
+						<option>Women's clothing</option>
+					</select>
+					<button class="text-center bg-blue-600 px-4 rounded-sm text-white">
+						Search
+					</button>
+				</div>
+
+				<div class="flex gap-2 mt-4">
+					<div class="text-center">
+						<i class="fa-solid fa-cart-shopping fa-lg xl:text-gray-400"></i>
+						<h1 class="xl:text-gray-400">My cart</h1>
+					</div>
+					<div class="text-center">
+						<i class="fa-solid fa-user fa-lg xl:text-gray-400"></i>
+						<h1 class="xl:text-gray-400">profile</h1>
+					</div>
+					<div class="text-center hidden md:block xl:block">
+						<i class="fa-solid fa-message fa-lg xl:text-gray-400"></i>
+						<h1 class="xl:text-gray-400">Message</h1>
+					</div>
+					<div class="text-center hidden md:block xl:block">
+						<i class="fa-solid fa-heart fa-lg xl:text-gray-400"></i>
+						<h1 class="xl:text-gray-400">Orders</h1>
+					</div>
+				</div>
+			</div>
+			<div class="xl:hidden">
+				<input
+					type="text"
+					placeholder="Search"
+					class="border-gray-400 border-2 my-5 size-full py-1 px-1" />
+				<select class="hidden">
+					<option>All category</option>
+					<option>Electronics</option>
+					<option>Toys</option>
+					<option>Women's clothing</option>
+				</select>
+			</div>
+		</nav>
+
+		<!-- Header section  -->
+		<header
+			class="text-center whitespace-nowrap px-2 overflow-auto pt-1 xl:text-left xl:flex xl:justify-between bg-white border border-slate-300">
+			<div class="">
+				<i class="hidden fa-solid fa-bars fa-lg mt-3 xl:inline-block"></i>
+				<a
+					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
+					>All category</a
+				>
+				<a
+					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
+					>Gadgets</a
+				>
+				<a
+					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
+					>Clothes</a
+				>
+				<a
+					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
+					>Hot offers</a
+				>
+				<a
+					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
+					>Gift boxes</a
+				>
+				<a
+					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
+					>Projects</a
+				>
+				<a
+					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
+					>Menu item</a
+				>
+			</div>
+			<div class="xl:flex gap-3 hidden text-sm">
+				<select>
+					<option>English,USD</option>
+					<option>English,EURO</option>
+					<option>English,MYR</option>
+					<option>English,PKR</option>
+				</select>
+				<select>
+					<option>Ship to USA</option>
+					<option>Ship to Germany</option>
+					<option>Ship to Malaysia</option>
+					<option>Ship to Pakistan</option>
+				</select>
+			</div>
+		</header>
+
+		<!-- Banner section  -->
+		<div class="flex mt-2 gap-6 xl:w-full bg-white px-3">
+			<div class="py-5 w-1/4 hidden md:block xl:block">
+				<h1 class="hover:bg-blue-300 py-2 px-2 rounded-lg font-serif">
+					Automobiles
+				</h1>
+				<h1 class="hover:bg-blue-300 py-2 px-2 rounded-lg font-serif">
+					Clothes and wear
+				</h1>
+				<h1 class="hover:bg-blue-300 py-2 px-2 rounded-lg font-serif">
+					Home interiors
+				</h1>
+				<h1 class="hover:bg-blue-300 py-2 px-2 rounded-lg font-serif">
+					Computer and tech
+				</h1>
+				<h1
+					class="hover:bg-blue-300 py-2 px-2 rounded-lg font-serif md:hidden xl:block">
+					Tools equipments
+				</h1>
+				<h1
+					class="hover:bg-blue-300 py-2 px-2 rounded-lg font-serif md:hidden xl:block">
+					Sports and outdoor
+				</h1>
+				<h1
+					class="hover:bg-blue-300 py-2 px-2 rounded-lg font-serif md:hidden xl:block">
+					Animal and pets
+				</h1>
+				<h1 class="hover:bg-blue-300 py-2 px-2 rounded-lg font-serif">
+					More category
+				</h1>
+			</div>
+			<div class="py-5 relative md:w-full xl:w-full">
+				<img
+					src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048387/ifl6ivqekjwvoj7zpvls.png"
+					alt=""
+					class="md:w-full xl:w-full xl:h-full" />
+				<h3
+					class="absolute top-10 left-3 text-center font-serif md:text-2xl md:top-16 xl:top-20 xl:text-2xl xl:left-9">
+					Latest trending
+				</h3>
+				<h3
+					class="absolute top-16 left-3 text-center font-bold font-serif md:text-2xl md:top-24 xl:top-28 xl:text-2xl xl:left-9">
+					Electronic items
+				</h3>
+				<button
+					class="absolute top-24 bg-white py-1 px-1 rounded-lg left-3 text-center font-bold font-serif text-blue-400 md:text-xl md:top-36 xl:top-40 xl:text-md xl:left-9 xl:text-black xl:py-2 xl:px-2">
+					Learn more
+				</button>
+			</div>
+			<div class="py-5 hidden xl:block w-1/5">
+				<div class="block bg-blue-100 py-4 px-2 rounded-lg">
+					<i class="fa-regular fa-user fa-xl"></i
+					><span>
+						Hi user <br />
+						let's get started
+					</span>
+					<br />
+					<button class="bg-blue-500 text-white w-full px-4 mt-2">
+						Join now
+					</button>
+					<br />
+					<button class="text-blue-500 w-full px-4 mt-2 bg-white">
+						Login in
+					</button>
+				</div>
+				<div
+					class="block w-full bg-orange-400 text-white rounded-lg mt-3 py-4 px-2">
+					<h1>Get US $10 off with a new supplier</h1>
+				</div>
+				<div
+					class="block w-full bg-blue-400 text-white rounded-lg mt-3 py-4 px-2">
+					Send quotes with supplier preferences
+				</div>
+			</div>
+		</div>
+
+		<!-- Deals Section -->
+		<div class="xl:flex gap-16 mt-5 px-2 bg-white">
+			<div class="flex justify-between xl:block xl:py-3">
+				<div>
+					<h2 class="font-bold font-serif text-lg md:text-2xl">
+						Deals and offers
+					</h2>
+					<h4 class="font-serif text-sm md:text-xl">Electronic equipments</h4>
+				</div>
+				<div class="flex gap-1 text-center xl:mt-2">
+					<span
+						class="bg-slate-300 hidden w-11 rounded-sm text-slate-600 md:block md:py-1 md:text-black xl:block xl:bg-slate-600 xl:text-white"
+						>4 <br />Days</span
+					>
+					<span
+						class="bg-slate-300 w-11 rounded-sm text-slate-600 md:py-1 md:text-black xl:bg-slate-600 xl:text-white"
+						>13 <br />Hour</span
+					>
+					<span
+						class="bg-slate-300 w-11 rounded-sm text-slate-600 md:py-1 md:text-black xl:bg-slate-600 xl:text-white"
+						>34 <br />Min</span
+					>
+					<span
+						class="bg-slate-300 w-11 rounded-sm text-slate-600 md:py-1 md:text-black xl:bg-slate-600 xl:text-white"
+						>56 <br />Sec</span
+					>
+				</div>
+			</div>
+
+			<div class="text-center whitespace-nowrap overflow-auto mt-4">
+				<a
+					class="py-2 px-2 rounded-md w-30 inline-block border-solid border-gray-300 border-2 md:px-2 md:py-4 xl:px-2 xl:py-4"
+					><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048742/uga8g9eiq4uv8z4a4ama.png"
+						alt=""
+						class="xl:w-36" />
+					<h1 class="font-serif">Suits</h1>
+					<h1
+						class="bg-red-300 text-red-600 rounded-lg font-serif xl:ml-[25%] xl:mr-[25%]">
+						-25%
+					</h1></a
+				>
+				<a
+					class="py-2 px-2 rounded-md w-30 inline-block border-solid border-gray-300 border-2 md:px-4 md:py-4 xl:px-4 xl:py-4 xl:ml-1"
+					><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048742/uga8g9eiq4uv8z4a4ama.png"
+						alt=""
+						class="xl:w-36" />
+					<h1 class="font-serif">Suits</h1>
+					<h1
+						class="bg-red-300 text-red-600 rounded-lg font-serif xl:ml-[25%] xl:mr-[25%]">
+						-25%
+					</h1></a
+				>
+				<a
+					class="py-2 px-2 rounded-md w-30 inline-block border-solid border-gray-300 border-2 md:px-4 md:py-4 xl:px-4 xl:py-4 xl:ml-1"
+					><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048742/uga8g9eiq4uv8z4a4ama.png"
+						alt=""
+						class="xl:w-36" />
+					<h1 class="font-serif">Suits</h1>
+					<h1
+						class="bg-red-300 text-red-600 rounded-lg font-serif xl:ml-[25%] xl:mr-[25%]">
+						-25%
+					</h1></a
+				>
+				<a
+					class="py-2 px-2 rounded-md w-30 inline-block border-solid border-gray-300 border-2 md:px-4 md:py-4 xl:px-4 xl:py-4 xl:ml-1"
+					><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048742/uga8g9eiq4uv8z4a4ama.png"
+						alt=""
+						class="xl:w-36" />
+					<h1 class="font-serif">Suits</h1>
+					<h1
+						class="bg-red-300 text-red-600 rounded-lg font-serif xl:ml-[25%] xl:mr-[25%]">
+						-25%
+					</h1></a
+				>
+				<a
+					class="py-2 px-2 rounded-md w-30 inline-block border-solid border-gray-300 border-2 md:px-4 md:py-4 xl:px-4 xl:py-4 xl:ml-1"
+					><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048742/uga8g9eiq4uv8z4a4ama.png"
+						alt=""
+						class="xl:w-36" />
+					<h1 class="font-serif">Suits</h1>
+					<h1
+						class="bg-red-300 text-red-600 rounded-lg font-serif xl:ml-[25%] xl:mr-[25%]">
+						-25%
+					</h1></a
+				>
+			</div>
+		</div>
+
+		<!-- catergory section 1 -->
+		<div class="xl:flex xl:gap-0 bg-white mt-5">
+			<div class="xl:relative xl:">
+				<img
+					src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048689/xkdchpjelmcc1u2qbkwp.png"
+					alt=""
+					class="hidden xl:block w-68 h-full" />
+				<div class="mx-2 xl:absolute xl:top-5 xl:left-3">
+					<h1 class="font-bold font-serif text-lg">
+						Home and <br class="hidden xl:block" />
+						outdoor
+					</h1>
+					<button
+						class="hidden xl:block xl:absolute xl:bg-white xl:py-1 xl:px-1 xl:rounded-md xl:w-full">
+						Source now
+					</button>
+				</div>
+			</div>
+			<div
+				class="text-center whitespace-nowrap overflow-auto xl:grid-cols-4 xl:grid xl:w-full xl:whitespace-normal xl:h-full">
+				<a
+					class="py-2 px-2 w-30 inline-block border-solid border-gray-300 border-2 xl:flex xl:h-28"
+					><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732049169/zo7pnm0r86mbnhc3dg2l.png"
+						alt=""
+						class="xl:w-20 xl:h-20" />
+					<div>
+						<h1 class="font-serif text-sm">Towel Stands</h1>
+						<h1 class="font-serif text-xs text-gray-400">From USD 19</h1>
+					</div></a
+				>
+				<a
+					class="py-2 px-2 w-30 inline-block border-solid border-gray-300 border-2 xl:flex xl:h-28"
+					><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732049169/zo7pnm0r86mbnhc3dg2l.png"
+						alt=""
+						class="xl:w-20 xl:h-20" />
+					<div>
+						<h1 class="font-serif text-sm">Towel Stands</h1>
+						<h1 class="font-serif text-xs text-gray-400">From USD 19</h1>
+					</div></a
+				>
+				<a
+					class="py-2 px-2 w-30 inline-block border-solid border-gray-300 border-2 xl:flex xl:h-28"
+					><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732049169/zo7pnm0r86mbnhc3dg2l.png"
+						alt=""
+						class="xl:w-20 xl:h-20" />
+					<div>
+						<h1 class="font-serif text-sm">Towel Stands</h1>
+						<h1 class="font-serif text-xs text-gray-400">From USD 19</h1>
+					</div></a
+				>
+				<a
+					class="py-2 px-2 w-30 inline-block border-solid border-gray-300 border-2 xl:flex xl:h-28"
+					><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732049169/zo7pnm0r86mbnhc3dg2l.png"
+						alt=""
+						class="xl:w-20 xl:h-20" />
+					<div>
+						<h1 class="font-serif text-sm">Towel Stands</h1>
+						<h1 class="font-serif text-xs text-gray-400">From USD 19</h1>
+					</div></a
+				>
+				<a
+					class="py-2 px-2 w-30 inline-block border-solid border-gray-300 border-2 xl:flex xl:h-28"
+					><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732049169/zo7pnm0r86mbnhc3dg2l.png"
+						alt=""
+						class="xl:w-20 xl:h-20" />
+					<div>
+						<h1 class="font-serif text-sm">Towel Stands</h1>
+						<h1 class="font-serif text-xs text-gray-400">From USD 19</h1>
+					</div></a
+				>
+				<a
+					class="py-2 px-2 w-30 inline-block border-solid border-gray-300 border-2 xl:flex xl:h-28"
+					><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732049169/zo7pnm0r86mbnhc3dg2l.png"
+						alt=""
+						class="xl:w-20 xl:h-20" />
+					<div>
+						<h1 class="font-serif text-sm">Towel Stands</h1>
+						<h1 class="font-serif text-xs text-gray-400">From USD 19</h1>
+					</div></a
+				><a
+					class="py-2 px-2 w-30 inline-block border-solid border-gray-300 border-2 xl:flex xl:h-28"
+					><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732049169/zo7pnm0r86mbnhc3dg2l.png"
+						alt=""
+						class="xl:w-20 xl:h-20" />
+					<div>
+						<h1 class="font-serif text-sm">Towel Stands</h1>
+						<h1 class="font-serif text-xs text-gray-400">From USD 19</h1>
+					</div></a
+				>
+				<a
+					class="py-2 px-2 w-30 inline-block border-solid border-gray-300 border-2 xl:flex xl:h-28"
+					><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732049169/zo7pnm0r86mbnhc3dg2l.png"
+						alt=""
+						class="xl:w-20 xl:h-20" />
+					<div>
+						<h1 class="font-serif text-sm">Towel Stands</h1>
+						<h1 class="font-serif text-xs text-gray-400">From USD 19</h1>
+					</div></a
+				>
+			</div>
+
+			<div class="mt-2 xl:hidden">
+				<button class="text-blue-600">
+					Source now
+					<i class="fas fa-arrow-right"></i>
+				</button>
+			</div>
+		</div>
+
+		<!-- catergory section 2 -->
+		<div class="mt-5 xl:flex xl:gap-0 bg-white">
+			<div class="xl:relative xl:">
+				<img
+					src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048462/zw1v4ui0tghtblcq8q2d.png"
+					alt=""
+					class="hidden xl:block w-68 h-full" />
+				<div class="mx-2 xl:absolute xl:top-5 xl:left-3">
+					<h1 class="font-bold font-serif text-lg">
+						Consumer<br class="hidden xl:block" />
+						electronics and gadgets
+					</h1>
+					<button
+						class="hidden xl:block xl:absolute xl:bg-white xl:py-1 xl:px-1 xl:rounded-md">
+						Source now
+					</button>
+				</div>
+			</div>
+			<div
+				class="text-center whitespace-nowrap overflow-auto xl:grid-cols-4 xl:grid xl:w-full xl:whitespace-normal xl:h-full">
+				<a
+					class="py-2 px-2 w-30 inline-block border-solid border-gray-300 border-2 xl:flex xl:h-28"
+					><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048950/nvbt47kosvvuhxrt5bjz.png"
+						alt=""
+						class="xl:w-20 xl:h-20" />
+					<div>
+						<h1 class="font-serif text-sm">Towel Stands</h1>
+						<h1 class="font-serif text-xs text-gray-400">From USD 19</h1>
+					</div></a
+				>
+				<a
+					class="py-2 px-2 w-30 inline-block border-solid border-gray-300 border-2 xl:flex xl:h-28"
+					><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048950/nvbt47kosvvuhxrt5bjz.png"
+						alt=""
+						class="xl:w-20 xl:h-20" />
+					<div>
+						<h1 class="font-serif text-sm">Towel Stands</h1>
+						<h1 class="font-serif text-xs text-gray-400">From USD 19</h1>
+					</div></a
+				>
+				<a
+					class="py-2 px-2 w-30 inline-block border-solid border-gray-300 border-2 xl:flex xl:h-28"
+					><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048950/nvbt47kosvvuhxrt5bjz.png"
+						alt=""
+						class="xl:w-20 xl:h-20" />
+					<div>
+						<h1 class="font-serif text-sm">Towel Stands</h1>
+						<h1 class="font-serif text-xs text-gray-400">From USD 19</h1>
+					</div></a
+				>
+				<a
+					class="py-2 px-2 w-30 inline-block border-solid border-gray-300 border-2 xl:flex xl:h-28"
+					><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048950/nvbt47kosvvuhxrt5bjz.png"
+						alt=""
+						class="xl:w-20 xl:h-20" />
+					<div>
+						<h1 class="font-serif text-sm">Towel Stands</h1>
+						<h1 class="font-serif text-xs text-gray-400">From USD 19</h1>
+					</div></a
+				>
+				<a
+					class="py-2 px-2 w-30 inline-block border-solid border-gray-300 border-2 xl:flex xl:h-28"
+					><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048950/nvbt47kosvvuhxrt5bjz.png"
+						alt=""
+						class="xl:w-20 xl:h-20" />
+					<div>
+						<h1 class="font-serif text-sm">Towel Stands</h1>
+						<h1 class="font-serif text-xs text-gray-400">From USD 19</h1>
+					</div></a
+				>
+				<a
+					class="py-2 px-2 w-30 inline-block border-solid border-gray-300 border-2 xl:flex xl:h-28"
+					><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048950/nvbt47kosvvuhxrt5bjz.png"
+						alt=""
+						class="xl:w-20 xl:h-20" />
+					<div>
+						<h1 class="font-serif text-sm">Towel Stands</h1>
+						<h1 class="font-serif text-xs text-gray-400">From USD 19</h1>
+					</div></a
+				><a
+					class="py-2 px-2 w-30 inline-block border-solid border-gray-300 border-2 xl:flex xl:h-28"
+					><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048950/nvbt47kosvvuhxrt5bjz.png"
+						alt=""
+						class="xl:w-20 xl:h-20" />
+					<div>
+						<h1 class="font-serif text-sm">Towel Stands</h1>
+						<h1 class="font-serif text-xs text-gray-400">From USD 19</h1>
+					</div></a
+				>
+				<a
+					class="py-2 px-2 w-30 inline-block border-solid border-gray-300 border-2 xl:flex xl:h-28"
+					><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048950/nvbt47kosvvuhxrt5bjz.png"
+						alt=""
+						class="xl:w-20 xl:h-20" />
+					<div>
+						<h1 class="font-serif text-sm">Towel Stands</h1>
+						<h1 class="font-serif text-xs text-gray-400">From USD 19</h1>
+					</div></a
+				>
+			</div>
+
+			<div class="mt-2 xl:hidden">
+				<button class="text-blue-600">
+					Source now
+					<i class="fas fa-arrow-right"></i>
+				</button>
+			</div>
+		</div>
+
+		<!-- Inquiry Div -->
+		<div class="py-5 relative">
+			<img
+				src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048797/i2wbmngwmupodibyiuz4.png"
+				alt=""
+				class="md:w-full xl:w-full" />
+			<h3
+				class="absolute top-10 left-3 font-sans md:font-serif w-44 text-white md:text-3xl md:w-2/5 md:left-10 md:top-8 md:font-bold xl:text-4xl xl:w-2/5 xl:font-bold xl:top-24 xl:left-4">
+				An easy way to spend requests to all suppliers
+				<br />
+			</h3>
+			<span
+				class="hidden absolute font-serif text-white md:block md:top-36 md:text-xl md:left-10 md:w-1/2 xl:block xl:text-2xl xl:w-2/5 xl:top-48 xl:left-10"
+				>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+				eiusmod tempor incididunt</span
+			>
+			<button
+				class="text-xs absolute top-24 py-2 px-2 rounded-lg left-4 text-center font-bold font-sans md:font-serif text-white bg-blue-600 md:top-60 md:left-10 md:text-base xl:hidden">
+				Send inquiry
+			</button>
+			<form
+				action=""
+				class="hidden xl:block xl:absolute xl:top-20 xl:left-2/4 xl:rounded-md xl:w-2/5 xl:bg-white xl:py-3 xl:px-3">
+				<h1 class="mt-2 py-1 px-1 font-bold text-xl">
+					Send quote to suppliers
+				</h1>
+				<input
+					type="text"
+					name=""
+					id=""
+					placeholder="What item you need?"
+					class="mt-2 py-1 px-1 w-full border-solid border-slate-200 border-2" /><br />
+				<textarea
+					name="message"
+					rows="3"
+					cols="23"
+					class="mt-2 px-1 py-1 w-full border-solid border-slate-200 border-2">
+Type more details
+				</textarea
+				>
+				<br />
+				<input
+					type="text"
+					name=""
+					id=""
+					placeholder="Quantity"
+					class="mt-2 py-1 px-1 w-2/5 border-solid border-slate-200 border-2" />
+				<select
+					class="mt-2 py-1 px-1 w-1/5 border-solid border-slate-200 border-2">
+					<option>Pcs</option>
+					<option>Kg</option>
+					<option>Box</option>
+				</select>
+				<br />
+				<button class="mt-2 py-2 px-2 rounded-md text-white bg-blue-600">
+					Send inquiry
+				</button>
+			</form>
+		</div>
+
+		<!-- Recommended items -->
+		<div class="mt-2">
+			<h1 class="font-bold text-2xl">Recommended items</h1>
+			<div
+				class="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-3 xl:grid-cols-5 xl:gap-4 xl:mt-4">
+				<div
+					class="shadow-md transition-all hover:shadow-slate-500 bg-white xl:border-2 xl:border-solid xl:border-slate-200">
+					<img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732049231/hqfnyw8uwnwcmksmeb6o.png"
+						alt="Avatar"
+						class="mt-5 ml-auto mr-auto xl:w-full" />
+					<div class="py-1 px-4 mt-4 mb-2">
+						<h4><b>$10.30</b></h4>
+						<p class="text-sm text-gray-400">
+							T-shirts with multiple colors, for men
+						</p>
+					</div>
+				</div>
+				<div
+					class="shadow-md transition-all hover:shadow-slate-500 bg-white xl:border-2 xl:border-solid xl:border-slate-200">
+					<img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732049231/hqfnyw8uwnwcmksmeb6o.png"
+						alt="Avatar"
+						class="mt-5 ml-auto mr-auto xl:w-full" />
+					<div class="py-1 px-4 mt-4 mb-2">
+						<h4><b>$10.30</b></h4>
+						<p class="text-sm text-gray-400">
+							T-shirts with multiple colors, for men
+						</p>
+					</div>
+				</div>
+				<div
+					class="shadow-md transition-all hover:shadow-slate-500 bg-white xl:border-2 xl:border-solid xl:border-slate-200">
+					<img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732049231/hqfnyw8uwnwcmksmeb6o.png"
+						alt="Avatar"
+						class="mt-5 ml-auto mr-auto xl:w-full" />
+					<div class="py-1 px-4 mt-4 mb-2">
+						<h4><b>$10.30</b></h4>
+						<p class="text-sm text-gray-400">
+							T-shirts with multiple colors, for men
+						</p>
+					</div>
+				</div>
+				<div
+					class="shadow-md transition-all hover:shadow-slate-500 bg-white xl:border-2 xl:border-solid xl:border-slate-200">
+					<img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732049231/hqfnyw8uwnwcmksmeb6o.png"
+						alt="Avatar"
+						class="mt-5 ml-auto mr-auto xl:w-full" />
+					<div class="py-1 px-4 mt-4 mb-2">
+						<h4><b>$10.30</b></h4>
+						<p class="text-sm text-gray-400">
+							T-shirts with multiple colors, for men
+						</p>
+					</div>
+				</div>
+				<div
+					class="shadow-md transition-all hover:shadow-slate-500 bg-white xl:border-2 xl:border-solid xl:border-slate-200">
+					<img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732049231/hqfnyw8uwnwcmksmeb6o.png"
+						alt="Avatar"
+						class="mt-5 ml-auto mr-auto xl:w-full" />
+					<div class="py-1 px-4 mt-4 mb-2">
+						<h4><b>$10.30</b></h4>
+						<p class="text-sm text-gray-400">
+							T-shirts with multiple colors, for men
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Extra services -->
+		<div class="mt-5 md:block xl:block">
+			<h1 class="text-2xl font-bold font-serif">Our extra services</h1>
+			<div
+				class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-3 xl:grid-cols-4 xl:gap-4">
+				<div class="mt-5 relative">
+					<img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048554/ahok5zrx6n0z7jissdws.png"
+						alt="Avatar"
+						class="w-full" />
+					<div class="bg-white py-2 px-2 w-full">
+						<h4 class="font-serif w-1/2">
+							<b>Sources from industry hub</b>
+						</h4>
+						<i
+							class="fa-solid fa-magnifying-glass absolute py-5 px-5 bg-blue-200 rounded-full left-64 md:left-52 xl:left-[210px]"
+							style="top: 55%"></i>
+					</div>
+				</div>
+				<div class="mt-5 relative">
+					<img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048554/ahok5zrx6n0z7jissdws.png"
+						alt="Avatar"
+						class="w-full" />
+					<div class="bg-white py-2 px-2">
+						<h4 class="font-serif w-1/2">
+							<b>Sources from industry hub</b>
+						</h4>
+						<i
+							class="fa-solid fa-magnifying-glass absolute py-5 px-5 bg-blue-200 rounded-full left-64 md:left-52 xl:left-[210px]"
+							style="top: 55%"></i>
+					</div>
+				</div>
+
+				<div class="mt-5 relative">
+					<img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048554/ahok5zrx6n0z7jissdws.png"
+						alt="Avatar"
+						class="w-full" />
+					<div class="bg-white py-2 px-2">
+						<h4 class="font-serif w-1/2">
+							<b>Sources from industry hub</b>
+						</h4>
+						<i
+							class="fa-solid fa-magnifying-glass absolute py-5 px-5 bg-blue-200 rounded-full left-64 md:left-52 xl:left-[210px]"
+							style="top: 55%"></i>
+					</div>
+				</div>
+
+				<div class="mt-5 relative">
+					<img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048554/ahok5zrx6n0z7jissdws.png"
+						alt="Avatar"
+						class="w-full" />
+					<div class="bg-white py-2 px-2">
+						<h4 class="font-serif w-1/2">
+							<b>Sources from industry hub</b>
+						</h4>
+						<i
+							class="fa-solid fa-magnifying-glass absolute py-5 px-5 bg-blue-200 rounded-full left-64 md:left-52 xl:left-[210px]"
+							style="top: 55%"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- suppliers section -->
+		<div class="mt-5">
+			<h1 class="font-serif font-bold text-2xl">Suppliers by region</h1>
+			<div
+				class="grid grid-cols-2 gap-4 mt-4 md:grid-cols-3 md:gap-3 xl:grid-cols-5 xl:gap-5">
+				<div class="flex gap-2">
+					<img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048224/lrwnrzqqzabrk0uxctv4.png"
+						alt=""
+						class="h-3/4" />
+					<h1 class="leading-4">
+						Arabic Emirates <span class="text-slate-400">shopname.ae</span>
+					</h1>
+				</div>
+				<div class="flex gap-2">
+					<img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048347/qfjvwmenraf2fgzolnec.png"
+						alt=""
+						class="h-3/4" />
+					<h1 class="leading-4">
+						Australia <br /><span class="text-slate-400">shopname.ae</span>
+					</h1>
+				</div>
+				<div class="flex gap-2">
+					<img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732049281/niaxuh7qie5hlufylqes.png"
+						alt=""
+						class="h-3/4" />
+					<h1 class="leading-4">
+						United States <br /><span class="text-slate-400">shopname.ae</span>
+					</h1>
+				</div>
+				<div class="flex gap-2">
+					<img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732049074/udhg1weshehqfehbhfgn.png"
+						alt=""
+						class="h-3/4" />
+					<h1 class="leading-4">
+						Russia <br /><span class="text-slate-400">shopname.ae</span>
+					</h1>
+				</div>
+				<div class="flex gap-2">
+					<img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048824/dwo5isd2if2bujdgjs0h.png"
+						alt=""
+						class="h-3/4" />
+					<h1 class="leading-4">
+						Italy <br /><span class="text-slate-400">shopname.ae</span>
+					</h1>
+				</div>
+				<div class="flex gap-2">
+					<img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048517/bc3gxar4zhh6wtcc8n3r.png"
+						alt=""
+						class="h-3/4" />
+					<h1 class="leading-4">
+						Denmark <br /><span class="text-slate-400">shopname.ae</span>
+					</h1>
+				</div>
+				<div class="flex gap-2">
+					<img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048601/w5vrq63lytwdtam55fqf.png"
+						alt=""
+						class="h-3/4" />
+					<h1 class="leading-4">
+						France <br /><span class="text-slate-400">shopname.ae</span>
+					</h1>
+				</div>
+				<div class="flex gap-2">
+					<img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048224/lrwnrzqqzabrk0uxctv4.png"
+						alt=""
+						class="h-3/4" />
+					<h1 class="leading-4">
+						Arabic Emirates <br /><span class="text-slate-400"
+							>shopname.ae</span
+						>
+					</h1>
+				</div>
+				<div class="flex gap-2">
+					<img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048429/nxs8xz1g2bmo0bqkhzvt.png"
+						alt=""
+						class="h-3/4" />
+					<h1 class="leading-4">
+						China <br /><span class="text-slate-400">shopname.ae</span>
+					</h1>
+				</div>
+				<div class="flex gap-2">
+					<img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048663/jwsidmcew9usvewv9di0.png"
+						alt=""
+						class="h-3/4" />
+					<h1 class="leading-4">
+						Great Britain <br /><span class="text-slate-400">shopname.ae</span>
+					</h1>
+				</div>
+			</div>
+		</div>
+
+		<!-- subscribe letter section -->
+		<div class="mt-10 font-sans text-center bg-slate-200 py-3">
+			<h1 class="font-bold text-xl">Subscribe to our newsletter</h1>
+			<h3 class="text-slate-500">
+				Get daily news on upcomming offers from many suppliers all over the
+				world
+			</h3>
+			<input
+				type="text"
+				placeholder="Email"
+				class="mt-4 border border-slate-200 px-2 py-1 rounded-md" />
+			<button class="py-1 px-2 bg-blue-600 text-white rounded-md">
+				Subscribe
+			</button>
+		</div>
+
+		<!-- Footer section -->
+		<footer class="mt-5 py-7 md:block xl:block bg-white px-7">
+			<div
+				class="grid grid-cols-2 gap-4 md:grid-cols-6 md:gap-4 xl:grid-cols-7 xl:gap-4">
+				<div class="col-span-2">
+					<i
+						class="fa-solid fa-bag-shopping text-white bg-blue-500 py-2 px-2 rounded-md"></i
+					><span class="text-blue-300 ml-3 text-2xl font-bold font-serif"
+						>Brand</span
+					>
+					<h3 class="mt-2 text-slate-600 text-xl">
+						Best information about the company gies here but now lorem ipsum is
+					</h3>
+					<i
+						class="fa-brands fa-facebook-f py-2 px-3 bg-slate-600 rounded-full text-white mt-3 ml-2"></i>
+					<i
+						class="fa-brands fa-twitter py-2 px-2 bg-slate-600 rounded-full text-white mt-3 ml-2"></i>
+					<i
+						class="fa-brands fa-linkedin-in py-2 px-2 bg-slate-600 rounded-full text-white mt-3 ml-2"></i>
+					<i
+						class="fa-brands fa-instagram py-2 px-2 bg-slate-600 rounded-full text-white mt-3 ml-2"></i>
+					<i
+						class="fa-brands fa-youtube py-2 px-2 bg-slate-600 rounded-full text-white mt-3 ml-2"></i>
+				</div>
+				<div>
+					<h1 class="font-bold">About</h1>
+					<div class="mt-2">
+						<a href="" class="text-slate-500">About Us</a><br />
+						<a href="" class="text-slate-500">Find store</a><br />
+						<a href="" class="text-slate-500">Categories</a><br />
+						<a href="" class="text-slate-500">Blogs</a>
+					</div>
+				</div>
+				<div>
+					<h1 class="font-bold">Partnership</h1>
+					<div class="mt-2">
+						<a href="" class="text-slate-500">About Us</a><br />
+						<a href="" class="text-slate-500">Find store</a><br />
+						<a href="" class="text-slate-500">Categories</a><br />
+						<a href="" class="text-slate-500">Blogs</a>
+					</div>
+				</div>
+				<div>
+					<h1 class="font-bold">Information</h1>
+					<div class="mt-2">
+						<a href="" class="text-slate-500">Help Center</a><br />
+						<a href="" class="text-slate-500">Money Refund</a><br />
+						<a href="" class="text-slate-500">Shipping</a><br />
+						<a href="" class="text-slate-500">Contact us</a>
+					</div>
+				</div>
+				<div>
+					<h1 class="font-bold">For users</h1>
+					<div class="mt-2">
+						<a href="" class="text-slate-500">Login</a><br />
+						<a href="" class="text-slate-500">Register</a><br />
+						<a href="" class="text-slate-500">Setting</a><br />
+						<a href="" class="text-slate-500">My Orders</a>
+					</div>
+				</div>
+				<div
+					class="text-center md:text-center md:w-full md:col-span-6 xl:col-span-1 xl:w-auto xl:text-left">
+					<h1 class="font-bold">Get app</h1>
+					<div class="mt-2">
+						<img
+							src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048304/sjciqb8wwaq4utxzhfib.png"
+							alt=""
+							class="md:ml-[40%] xl:ml-0" />
+						<img
+							src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048641/y4ri0dczwmv8he4mhckb.png"
+							alt=""
+							class="mt-2 md:ml-[40%] xl:ml-0" />
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

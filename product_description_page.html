@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Product Description Page</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+		<script src="https://cdn.tailwindcss.com"></script>
+		<!-- <link rel="stylesheet" href="product_description.css" /> -->
+		<script src="product_description.js" defer></script>
+	</head>
+	<body class="w-full py-2 bg-slate-100 size-full">
+		<!-- Navbar section  -->
+		<nav class="bg-white pb-2 md:pb-3 px-3">
+			<div class="flex justify-between">
+				<div class="flex mt-4">
+					<i class="fa-solid fa-arrow-left fa-lg mt-3 xl:hidden"></i>
+					<a href="index.html"
+						><img
+							src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732049107/mjtj07ngvughbpiu38hd.png"
+							alt=""
+							class="hidden xl:block h-7 bg-blue-500 mx-2 py-1 px-1 rounded-md shadow-md shadow-blue-400"
+					/></a>
+					<a
+						href="index.html"
+						class="hidden xl:block text-blue-500 font-serif font-bold text-xl">
+						Brand
+					</a>
+				</div>
+
+				<div
+					class="hidden xl:flex border-blue-500 border-2 rounded-md text-center h-full mt-4">
+					<input type="text" placeholder="Search" class="px-2 w-96 py-1" />
+					<select class="border-blue-400 border-l-2">
+						<option>All category</option>
+						<option>Electronics</option>
+						<option>Toys</option>
+						<option>Women's clothing</option>
+					</select>
+					<button class="text-center bg-blue-600 px-4 rounded-sm text-white">
+						Search
+					</button>
+				</div>
+
+				<div class="flex gap-2 mt-4">
+					<div class="text-center">
+						<i class="fa-solid fa-cart-shopping fa-lg xl:text-gray-400"></i>
+						<h1 class="hidden xl:block xl:text-gray-400">My cart</h1>
+					</div>
+					<div class="text-center">
+						<i class="fa-solid fa-user fa-lg xl:text-gray-400"></i>
+						<h1 class="hidden xl:block xl:text-gray-400">profile</h1>
+					</div>
+					<div class="text-center hidden md:block xl:block">
+						<i class="fa-solid fa-message fa-lg xl:text-gray-400"></i>
+						<h1 class="xl:text-gray-400">Message</h1>
+					</div>
+					<div class="text-center hidden md:block xl:block">
+						<i class="fa-solid fa-heart fa-lg xl:text-gray-400"></i>
+						<h1 class="xl:text-gray-400">Orders</h1>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Header section  -->
+		<header
+			class="hidden text-center whitespace-nowrap px-2 overflow-auto pt-1 xl:text-left xl:flex xl:justify-between bg-white border border-slate-300">
+			<div>
+				<i class="hidden fa-solid fa-bars fa-lg mt-3 xl:inline-block"></i>
+				<a
+					href="product_listing_page.html"
+					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
+					>All category</a
+				>
+				<a
+					href="product_listing_page.html"
+					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
+					>Gadgets</a
+				>
+				<a
+					href="product_listing_page.html"
+					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
+					>Clothes</a
+				>
+				<a
+					href="product_listing_page.html"
+					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
+					>Hot offers</a
+				>
+				<a
+					href="product_listing_page.html"
+					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
+					>Gift boxes</a
+				>
+				<a
+					href="product_listing_page.html"
+					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
+					>Projects</a
+				>
+				<a
+					href="product_listing_page.html"
+					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
+					>Menu item</a
+				>
+			</div>
+			<div class="xl:flex gap-3 hidden text-sm">
+				<select>
+					<option>English,USD</option>
+					<option>English,EURO</option>
+					<option>English,MYR</option>
+					<option>English,PKR</option>
+				</select>
+				<select>
+					<option>Ship to USA</option>
+					<option>Ship to Germany</option>
+					<option>Ship to Malaysia</option>
+					<option>Ship to Pakistan</option>
+				</select>
+			</div>
+		</header>
+
+		<!-- Category Defining Section -->
+		<div class="hidden xl:block xl:py-3 xl:px-4">
+			<span class="text-slate-500"
+				>Home > Clothing > Men's wear > Summer Clothing</span
+			>
+		</div>
+
+		<!-- Single Product Div -->
+		<div class="mt-4 xl:flex px-2">
+			<div class="product">
+				<div class="relative overflow-hidden group">
+					<!-- Carousel Container -->
+					<div
+						id="carousel"
+						class="flex transition-transform duration-500 h-64 xl:h-full w-full"></div>
+
+					<!-- Navigation Arrows -->
+
+					<button
+						id="prev"
+						class="absolute right-12 bottom-1 -translate-y-1/2 bg-gray-800 text-white rounded-full w-10 h-10 flex items-center justify-center opacity-50 hover:opacity-100 transition duration-300 group-hover:block">
+						&larr;
+					</button>
+					<button
+						id="next"
+						class="absolute right-1 bottom-1 -translate-y-1/2 bg-gray-800 text-white rounded-full w-10 h-10 flex items-center justify-center opacity-50 hover:opacity-100 transition duration-300 group-hover:block">
+						&rarr;
+					</button>
+				</div>
+
+				<!-- Dots Navigation -->
+				<div id="dots" class="hidden justify-center mt-4 space-x-2 xl:flex">
+					<button class="w-4 h-4 rounded-full bg-gray-400"></button>
+					<button class="w-4 h-4 rounded-full bg-gray-400"></button>
+					<button class="w-4 h-4 rounded-full bg-gray-400"></button>
+				</div>
+			</div>
+			<div class="py-4 bg-white px-4 mt-2 w-full">
+				<span id="rating"></span>
+			</div>
+			<div
+				class="supplier_info mt-10 bg-white py-4 px-4 xl:mt-2 xl:w-full xl:text-2xl">
+				<div class="flex xl:mt-6">
+					<div class="xl:mt-2">
+						<span
+							class="bg-blue-200 py-2 px-4 rounded-lg text-blue-400 text-xl font-bold xl:py-4 xl:px-6"
+							>R</span
+						>
+					</div>
+					<div class="px-3">
+						<h1>Supplier</h1>
+						<span>Guanjoi Trading LLC</span>
+					</div>
+				</div>
+				<div class="flex justify-between mt-4 text-xl xl:block xl:px-20">
+					<h1 class="xl:mt-2 flex">
+						<img
+							src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASIAAACuCAMAAAClZfCTAAAAIVBMVEX+zgABAQHcAAACBAAAAQUGAgDLCA3VAAX/xBT90AHfAAEctey5AAABQUlEQVR4nO3bwWrCQBRA0Vedqu3/f3C1BhFtud3VxTlDwjBkwnDJNvNGmP8+wOuTKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSpVnn27qMdZ7drm1cZtviNnla+F5bv+1fd4///MLr/seFVzrQ7AmzCPNOmANhPgmzI0iUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSP6yTryjNkTAnwnwQBgAAAAAAAAAAAAAAAAAAAPizL82iAJZt4rYoAAAAAElFTkSuQmCC"
+							alt=""
+							class="size-10 h-7 mr-2" />Germany
+					</h1>
+					<h1 class="xl:mt-3">
+						<i class="fa-solid fa-check mr-2"></i>Verified
+					</h1>
+					<h1 class="xl:mt-3">
+						<i class="fa-solid fa-globe mr-2"></i>Shipping
+					</h1>
+					<button
+						class="hidden xl:w-full xl:block mt-10 bg-blue-500 py-2 px-2 rounded-lg text-white">
+						Send inquiry
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Navigation Tab -->
+		<div class="w-full px-10 mt-10 hidden xl:block bg-white">
+			<div class="flex border-b">
+				<button
+					class="tab-btn px-4 py-2 text-blue-500 border-b-2 border-blue-500"
+					onclick="showTab(event, 'description')">
+					Description
+				</button>
+				<button
+					class="tab-btn px-4 py-2 text-gray-500 hover:text-blue-500 border-b-2"
+					onclick="showTab(event, 'reviews')">
+					Reviews
+				</button>
+				<button
+					class="tab-btn px-4 py-2 text-gray-500 hover:text-blue-500 border-b-2"
+					onclick="showTab(event, 'shipping')">
+					Shipping
+				</button>
+				<button
+					class="tab-btn px-4 py-2 text-gray-500 hover:text-blue-500 border-b-2"
+					onclick="showTab(event, 'about-seller')">
+					About seller
+				</button>
+			</div>
+			<div class="tab-content mt-4">
+				<div id="description" class="tab-pane">
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+						voluptas laboriosam ad sit magni rerum, iusto quia quaerat
+						consequatur ipsam voluptatum doloremque alias saepe aut repellendus
+						at illum vero corrupti?
+					</p>
+				</div>
+				<div id="reviews" class="tab-pane hidden">
+					<p>Here are the reviews.</p>
+					<p>Here are the reviews.</p>
+					<p>Here are the reviews.</p>
+					<p>Here are the reviews.</p>
+					<p>Here are the reviews.</p>
+					<p>Here are the reviews.</p>
+					<p>Here are the reviews.</p>
+					<p>Here are the reviews.</p>
+					<p>Here are the reviews.</p>
+				</div>
+				<div id="shipping" class="tab-pane hidden">
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit sed
+						eius ipsam laborum dolorum! Culpa laboriosam voluptatum libero
+						magnam itaque eligendi voluptatem. Ipsa ullam laborum architecto,
+						similique nam dolores expedita! Lorem ipsum dolor sit amet
+						consectetur adipisicing elit. Ad adipisci quod earum nemo impedit
+						vitae, eum ipsam! Libero consequatur incidunt tenetur perspiciatis
+						aliquam, at veniam deserunt praesentium eligendi, excepturi Lorem
+						ipsum dolor sit amet consectetur adipisicing elit. Rem sequi porro
+						assumenda eligendi, vero ad provident magni soluta magnam
+						repudiandae iure temporibus ullam explicabo aspernatur, est sint
+						suscipit quidem nulla! Lorem ipsum dolor sit amet consectetur
+						adipisicing elit. Doloremque debitis similique adipisci
+						necessitatibus nesciunt eius esse? Reiciendis nulla tenetur a nam
+						recusandae fuga earum quo. Deleniti fuga iste sit explicabo?
+					</p>
+				</div>
+				<div id="about-seller" class="tab-pane hidden">
+					<h1 class="font-bold text-3xl">About Us</h1>
+					<h3 class="text-xl">Welcome to TrendyThreads!</h3>
+					<p>
+						Discover the latest fashion trends with quality and style. At
+						TrendyThreads, we offer a wide range of chic clothing, accessories,
+						and footwear, ensuring you stay stylish and on-trend.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- You may also like Div -->
+		<div class="mt-5 xl:gap-0 xl:hidden">
+			<div class="xl:relative">
+				<div class="mx-2 xl:absolute xl:top-5 xl:left-3">
+					<h1 class="font-bold font-serif text-lg">Similar Products</h1>
+				</div>
+			</div>
+			<div
+				class="mt-3 whitespace-nowrap overflow-auto xl:grid-cols-4 xl:grid xl:w-full xl:whitespace-normal xl:h-full">
+				<a
+					class="py-2 px-2 w-40 bg-white inline-block border-solid border-gray-300 border-2 xl:flex xl:h-28"
+					><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048950/nvbt47kosvvuhxrt5bjz.png"
+						alt=""
+						class="size-36 xl:w-20 xl:h-20" />
+					<div>
+						<h1 class="font-sans text-lg">$10.30</h1>
+						<span class="font-sans whitespace-normal text-slate-400"
+							>Ipad with multiple color,64 GB</span
+						>
+					</div></a
+				>
+				<a
+					class="py-2 px-2 w-40 bg-white inline-block border-solid border-gray-300 border-2 xl:flex xl:h-28"
+					><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048950/nvbt47kosvvuhxrt5bjz.png"
+						alt=""
+						class="size-36 xl:w-20 xl:h-20" />
+					<div>
+						<h1 class="font-sans text-lg">$10.30</h1>
+						<span class="font-sans whitespace-normal text-slate-400"
+							>Ipad with multiple color,64 GB</span
+						>
+					</div></a
+				>
+				<a
+					class="py-2 px-2 w-40 bg-white inline-block border-solid border-gray-300 border-2 xl:flex xl:h-28"
+					><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048950/nvbt47kosvvuhxrt5bjz.png"
+						alt=""
+						class="size-36 xl:w-20 xl:h-20" />
+					<div>
+						<h1 class="font-sans text-lg">$10.30</h1>
+						<span class="font-sans whitespace-normal text-slate-400"
+							>Ipad with multiple color,64 GB</span
+						>
+					</div></a
+				>
+				<a
+					class="py-2 px-2 w-40 bg-white inline-block border-solid border-gray-300 border-2 xl:flex xl:h-28"
+					><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048950/nvbt47kosvvuhxrt5bjz.png"
+						alt=""
+						class="size-36 xl:w-20 xl:h-20" />
+					<div>
+						<h1 class="font-sans text-lg">$10.30</h1>
+						<span class="font-sans whitespace-normal text-slate-400"
+							>Ipad with multiple color,64 GB</span
+						>
+					</div></a
+				>
+				<a
+					class="py-2 px-2 w-40 bg-white inline-block border-solid border-gray-300 border-2 xl:flex xl:h-28"
+					><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048950/nvbt47kosvvuhxrt5bjz.png"
+						alt=""
+						class="size-36 xl:w-20 xl:h-20" />
+					<div>
+						<h1 class="font-sans text-lg">$10.30</h1>
+						<span class="font-sans whitespace-normal text-slate-400"
+							>Ipad with multiple color,64 GB</span
+						>
+					</div></a
+				>
+				<a
+					class="py-2 px-2 w-40 bg-white inline-block border-solid border-gray-300 border-2 xl:flex xl:h-28"
+					><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048950/nvbt47kosvvuhxrt5bjz.png"
+						alt=""
+						class="size-36 xl:w-20 xl:h-20" />
+					<div>
+						<h1 class="font-sans text-lg">$10.30</h1>
+						<span class="font-sans whitespace-normal text-slate-400"
+							>Ipad with multiple color,64 GB</span
+						>
+					</div></a
+				><a
+					class="py-2 px-2 w-40 bg-white inline-block border-solid border-gray-300 border-2 xl:flex xl:h-28"
+					><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048950/nvbt47kosvvuhxrt5bjz.png"
+						alt=""
+						class="size-36 xl:w-20 xl:h-20" />
+					<div>
+						<h1 class="font-sans text-lg">$10.30</h1>
+						<span class="font-sans whitespace-normal text-slate-400"
+							>Ipad with multiple color,64 GB</span
+						>
+					</div></a
+				>
+				<a
+					class="py-2 px-2 w-40 bg-white inline-block border-solid border-gray-300 border-2 xl:flex xl:h-28"
+					><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048950/nvbt47kosvvuhxrt5bjz.png"
+						alt=""
+						class="size-36 xl:w-20 xl:h-20" />
+					<div>
+						<h1 class="font-sans text-lg">$10.30</h1>
+						<span class="font-sans whitespace-normal text-slate-400"
+							>Ipad with multiple color,64 GB</span
+						>
+					</div></a
+				>
+			</div>
+		</div>
+
+		<!-- Footer section -->
+		<footer class="hidden mt-5 py-7 md:block xl:block bg-white px-7">
+			<div
+				class="grid grid-cols-2 gap-4 md:grid-cols-6 md:gap-4 xl:grid-cols-7 xl:gap-4">
+				<div class="col-span-2">
+					<i
+						class="fa-solid fa-bag-shopping text-white bg-blue-500 py-2 px-2 rounded-md"></i
+					><span class="text-blue-300 ml-3 text-2xl font-bold font-serif"
+						>Brand</span
+					>
+					<h3 class="mt-2 text-slate-600 text-xl">
+						Best information about the company gies here but now lorem ipsum is
+					</h3>
+					<i
+						class="fa-brands fa-facebook-f py-2 px-3 bg-slate-600 rounded-full text-white mt-3 ml-2"></i>
+					<i
+						class="fa-brands fa-twitter py-2 px-2 bg-slate-600 rounded-full text-white mt-3 ml-2"></i>
+					<i
+						class="fa-brands fa-linkedin-in py-2 px-2 bg-slate-600 rounded-full text-white mt-3 ml-2"></i>
+					<i
+						class="fa-brands fa-instagram py-2 px-2 bg-slate-600 rounded-full text-white mt-3 ml-2"></i>
+					<i
+						class="fa-brands fa-youtube py-2 px-2 bg-slate-600 rounded-full text-white mt-3 ml-2"></i>
+				</div>
+				<div>
+					<h1 class="font-bold">About</h1>
+					<div class="mt-2">
+						<a href="" class="text-slate-500">About Us</a><br />
+						<a href="" class="text-slate-500">Find store</a><br />
+						<a href="" class="text-slate-500">Categories</a><br />
+						<a href="" class="text-slate-500">Blogs</a>
+					</div>
+				</div>
+				<div>
+					<h1 class="font-bold">Partnership</h1>
+					<div class="mt-2">
+						<a href="" class="text-slate-500">About Us</a><br />
+						<a href="" class="text-slate-500">Find store</a><br />
+						<a href="" class="text-slate-500">Categories</a><br />
+						<a href="" class="text-slate-500">Blogs</a>
+					</div>
+				</div>
+				<div>
+					<h1 class="font-bold">Information</h1>
+					<div class="mt-2">
+						<a href="" class="text-slate-500">Help Center</a><br />
+						<a href="" class="text-slate-500">Money Refund</a><br />
+						<a href="" class="text-slate-500">Shipping</a><br />
+						<a href="" class="text-slate-500">Contact us</a>
+					</div>
+				</div>
+				<div>
+					<h1 class="font-bold">For users</h1>
+					<div class="mt-2">
+						<a href="" class="text-slate-500">Login</a><br />
+						<a href="" class="text-slate-500">Register</a><br />
+						<a href="" class="text-slate-500">Setting</a><br />
+						<a href="" class="text-slate-500">My Orders</a>
+					</div>
+				</div>
+				<div
+					class="text-center md:text-center md:w-full md:col-span-6 xl:col-span-1 xl:w-auto xl:text-left">
+					<h1 class="font-bold">Get app</h1>
+					<div class="mt-2">
+						<img
+							src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048304/sjciqb8wwaq4utxzhfib.png"
+							alt=""
+							class="md:ml-[40%] xl:ml-0" />
+						<img
+							src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048641/y4ri0dczwmv8he4mhckb.png"
+							alt=""
+							class="mt-2 md:ml-[40%] xl:ml-0" />
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

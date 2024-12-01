@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Product listing Page</title>
+		<script src="product_listing.js" defer></script>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+		<script src="https://cdn.tailwindcss.com" ></script>
+	</head>
+	<body class="px-10 py-5 bg-slate-100">
+		<!-- Navbar section  -->
+		<nav class="bg-white pb-0 md:pb-3 px-3">
+			<div class="flex justify-between">
+				<div class="flex mt-4">
+					<i class="fa-solid fa-arrow-left fa-lg mt-3 xl:hidden"></i>
+					<h1 class="font-sans text-base px-1 xl:hidden">Mobile accessory</h1>
+					<a href="index.html"><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732049107/mjtj07ngvughbpiu38hd.png"
+						alt=""
+						class="hidden xl:block h-7 bg-blue-500 mx-2 py-1 px-1 rounded-md shadow-md shadow-blue-400" /></a>
+						<a href="index.html"><h1 class="hidden xl:block text-blue-500 font-serif font-bold text-xl">Brand</h1></a>
+				</div>
+
+				<div
+					class="hidden xl:flex border-blue-500 border-2 rounded-md text-center h-full mt-4">
+					<input type="text" placeholder="Search" class="px-2 w-96 py-1" />
+					<select class="border-blue-400 border-l-2">
+						<option>All category</option>
+						<option>Electronics</option>
+						<option>Toys</option>
+						<option>Women's clothing</option>
+					</select>
+					<button class="text-center bg-blue-600 px-4 rounded-sm text-white">
+						Search
+					</button>
+				</div>
+
+				<div class="flex gap-2 mt-4">
+					<div class="text-center">
+						<i class="fa-solid fa-cart-shopping fa-lg xl:text-gray-400"></i>
+						<h1 class="hidden xl:block xl:text-gray-400">My cart</h1>
+					</div>
+					<div class="text-center">
+						<i class="fa-solid fa-user fa-lg xl:text-gray-400"></i>
+						<h1 class="hidden xl:block xl:text-gray-400">profile</h1>
+					</div>
+					<div class="text-center hidden md:block xl:block">
+						<i class="fa-solid fa-message fa-lg xl:text-gray-400"></i>
+						<h1 class="xl:text-gray-400">Message</h1>
+					</div>
+					<div class="text-center hidden md:block xl:block">
+						<i class="fa-solid fa-heart fa-lg xl:text-gray-400"></i>
+						<h1 class="xl:text-gray-400">Orders</h1>
+					</div>
+				</div>
+			</div>
+			<div class="xl:hidden">
+				<input
+					type="text"
+					placeholder="Search"
+					class="border-gray-400 border-2 my-5 size-full py-1 px-1" />
+				<select class="hidden">
+					<option>All category</option>
+					<option>Electronics</option>
+					<option>Toys</option>
+					<option>Women's clothing</option>
+				</select>
+			</div>
+		</nav>
+
+		<!-- Header section  -->
+		<header
+			class="text-center whitespace-nowrap px-2 overflow-auto pt-1 xl:text-left xl:flex xl:justify-between bg-white border border-slate-300">
+			<div class="">
+				<i class="hidden fa-solid fa-bars fa-lg mt-3 xl:inline-block"></i>
+				<a
+					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
+					>All category</a
+				>
+				<a
+					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
+					>Gadgets</a
+				>
+				<a
+					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
+					>Clothes</a
+				>
+				<a
+					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
+					>Hot offers</a
+				>
+				<a
+					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
+					>Gift boxes</a
+				>
+				<a
+					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
+					>Projects</a
+				>
+				<a
+					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
+					>Menu item</a
+				>
+			</div>
+			<div class="xl:flex gap-3 hidden text-sm">
+				<select>
+					<option>English,USD</option>
+					<option>English,EURO</option>
+					<option>English,MYR</option>
+					<option>English,PKR</option>
+				</select>
+				<select>
+					<option>Ship to USA</option>
+					<option>Ship to Germany</option>
+					<option>Ship to Malaysia</option>
+					<option>Ship to Pakistan</option>
+				</select>
+			</div>
+		</header>
+
+		<!-- Category Defining Section -->
+		<div class="hidden xl:block xl:py-3">
+			<span class="text-slate-500"
+				>Home > Clothing > Men's wear > Summer Clothing</span
+			>
+		</div>
+
+		<!-- This div only uses for website responsive -->
+		<div class="block xl:grid xl:grid-cols-4 xl:gap-4">
+			<!-- Filter Section -->
+
+			<div>
+				<div class="hidden xl:block xl:col-span-1">
+					<div class="w-full p-4">
+						<h3 class="text-lg font-semibold text-gray-700 mb-3">Category</h3>
+						<ul class="space-y-2">
+							<li>
+								<a href="#" class="hover:text-blue-800 text-sm"
+									>Mobile accessory</a
+								>
+							</li>
+							<li>
+								<a href="#" class="hover:text-blue-800 text-sm">Electronics</a>
+							</li>
+							<li>
+								<a href="#" class="hover:text-blue-800 text-sm">Smartphones</a>
+							</li>
+							<li>
+								<a href="#" class="hover:text-blue-800 text-sm">Modern tech</a>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="font-medium text-blue-600 hover:text-gray-900 text-sm"
+									>See all</a
+								>
+							</li>
+						</ul>
+
+						<h3 class="text-lg mt-4 font-semibold text-gray-700 mb-3">
+							Brands
+						</h3>
+						<ul class="space-y-2">
+							<li>
+								<input type="checkbox"><label for="" class="ml-2">Samsung</label></input>
+							</li>
+							<li>
+								<input type="checkbox"><label for="" class="ml-2">Apple</label></input>
+							</li>
+							<li>
+								<input type="checkbox"><label for="" class="ml-2">Huawei</label></input>
+							</li>
+							<li>
+								<input type="checkbox" ><label for="" class="ml-2">Pocco</label></input>
+							</li>
+							<li>
+								<input type="checkbox" ><label for="" class="ml-2">Lenovo</label></input>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="font-medium text-blue-600 hover:text-gray-900 text-sm"
+									>See all</a
+								>
+							</li>
+						</ul>
+						<h3 class="text-lg mt-4 font-semibold text-gray-700 mb-3">
+							Features
+						</h3>
+						<ul class="space-y-2">
+							<li>
+								<input type="checkbox"><label for="" class="ml-2">Metallic</label></input>
+							</li>
+							<li>
+								<input type="checkbox"><label for="" class="ml-2">Plastic cover</label></input>
+							</li>
+							<li>
+								<input type="checkbox"><label for="" class="ml-2">8GB Ram</label></input>
+							</li>
+							<li>
+								<input type="checkbox" ><label for="" class="ml-2">Super power</label></input>
+							</li>
+							<li>
+								<input type="checkbox" ><label for="" class="ml-2">Large Memory</label></input>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="font-medium text-blue-600 hover:text-gray-900 text-sm"
+									>See all</a
+								>
+							</li>
+						</ul>
+
+						<div class="w-full mt-3 rounded-md">
+							<!-- Filter: Price Range -->
+							<div class="border-b border-gray-200">
+								<button
+									class="w-full flex justify-between items-center p-3 text-gray-700 hover:bg-gray-100"
+									onclick="toggleDropdown('priceRange')">
+									<span>Price range</span>
+									<i class="fa-solid fa-caret-down"></i>
+								</button>
+								<div id="priceRange" class="hidden px-3 pb-3">
+									<p class="text-sm text-gray-600">Price options go here.</p>
+								</div>
+							</div>
+
+							<!-- Filter: Condition -->
+							<div class="border-b border-gray-200">
+								<button
+									class="w-full flex justify-between items-center p-3 text-gray-700 hover:bg-gray-100"
+									onclick="toggleDropdown('condition')">
+									<span>Condition</span>
+									<i class="fa-solid fa-caret-down"></i>
+								</button>
+								<div id="condition" class="hidden px-3 pb-3">
+									<p class="text-sm text-gray-600">
+										Condition options go here.
+									</p>
+								</div>
+							</div>
+
+							<!-- Filter: Ratings -->
+							<div class="border-b border-gray-200">
+								<button
+									class="w-full flex justify-between items-center p-3 text-gray-700 hover:bg-gray-100"
+									onclick="toggleDropdown('ratings')">
+									<span>Ratings</span>
+									<i class="fa-solid fa-caret-down"></i>
+								</button>
+								<div id="ratings" class="hidden px-3 pb-3">
+									<p class="text-sm text-gray-600">Ratings options go here.</p>
+								</div>
+							</div>
+
+							<!-- Filter: Manufacturer -->
+							<div>
+								<button
+									class="w-full flex justify-between items-center p-3 text-gray-700 hover:bg-gray-100"
+									onclick="toggleDropdown('manufacturer')">
+									<span>Manufacturer</span>
+									<i class="fa-solid fa-caret-down"></i>
+								</button>
+								<div id="manufacturer" class="hidden px-3 pb-3">
+									<p class="text-sm text-gray-600">
+										Manufacturer options go here.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="xl:hidden">
+					<div class="flex py-2 justify-between bg-white px-2">
+						<select class="border border-slate-400 rounded-md">
+							<option>
+								<span>
+									Sort: Newest
+									<img src="bar_sort.png" alt="" class="size-7 ml-1"
+								/></span>
+							</option>
+							<option>Oldest</option>
+						</select>
+						<span class="flex text-lg font-sans bg-white px-5"
+							>Filters(3)
+							<i class="fa-solid fa-filter size-7 ml-1 py-1 text-slate-400"></i
+						></span>
+						<img src="grid_view.png" alt="" class="size-7 bg-white" />
+					</div>
+					<div class="mt-2">
+						<span
+							class="font-sans px-2 bg-white py-2 border border-blue-600 rounded-md"
+							>Huawie
+							<i class="fa-solid fa-xmark text-slate-400 text-lg ml-2"></i
+						></span>
+						<span
+							class="font-sans px-2 bg-white py-2 border border-blue-600 rounded-md"
+							>Apple
+							<i class="fa-solid fa-xmark text-slate-400 text-lg ml-2"></i
+						></span>
+						<span
+							class="font-sans px-2 bg-white py-2 border border-blue-600 rounded-md"
+							>64 GB
+							<i class="fa-solid fa-xmark text-slate-400 text-lg ml-2"></i
+						></span>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- Items Div -->
+			<div class="mt-4 xl:col-span-3 w-full ">
+				<div class="hidden xl:flex justify-between w-full bg-white py-2 rounded-md px-2">
+					<div>
+						<span>12,911 items in <span class="font-bold">Mobile accessory</span></span>
+					</div>
+					<div class="flex gap-3 ">
+						<input type="checkbox"><label>Verified Only</label></input>
+						<select>
+							<option>Featured</option>
+							<option>latest</option>
+							<option>oldest</option>
+							<option>recommeded</option>
+						</select>
+						<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAOVBMVEX///8AAABDQ0NLS0vr6+vj4+NXV1dfX1/S0tKsrKxkZGSysrJdXV3Z2dnLy8umpqavr69sbGxvb2+4fpZ8AAABd0lEQVR4nO3cy3KCQBBAUfHBQzFi/v9jk43RDUJb0xShzlnbVXNx4QhT7HYAAAAAAAAAAAAbc6v3c9Xd62AXGLzld/RVxPk52IQG++yOW2g5VXV5DA7Bwe7dKgqog+tpHoOxb7Kq6uSQfXA9h8fgITi4FyLkf4dcj++1YyHtxOB14ZDjxOdOYyGnicGjkBghQpIIEZJEiJAkQoQkESIkiRAhSYQISSJESBIhQpIIWWtIe3rvayzka2KwXThkrtU/sRIipLCPTz7EjqLkn3zoguv5O4tyCQ4OySG7c2g538/Be2jwnt3xe2mbw1zNpcggAKzQ0Of/IPbpG5To5u9lpxHbopzHV1DGYpvG1R5gXts2fjN/rIQISQ7ZzA26zdwyFSKkMCFCkggRkkSIkCRChCQRIiSJECFJhAhJIkRIEiFCkmzuBS9zrf6JlRAhhW3m1W2beZle8Mq+nA6KnXxuxldQSuS9kcOng+nfBwAAAAAAAAAAwNJ+APOJJGMj2BHUAAAAAElFTkSuQmCC" alt="" class="size-7 bg-white" />
+					</div>
+				</div>
+				<a href="product_description_page.html"><div id="item-container"
+					class="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-3 xl:grid-cols-3 xl:gap-5 xl:mt-4 ">
+				</div></a>
+				<div class=" mt-4 xl:flex justify-end items-end">
+					<button id="prev-button" class="px-4 py-2" disabled><i class="fa-solid fa-less-than"></i></button>
+					<span id="pagination-info" class="px-4 py-2 "></span>
+					<button id="next-button" class="px-4 py-2"><i class="fa-solid fa-greater-than"></i></button>
+				</div>
+			</div>
+			
+		</div>
+
+		<!-- You may also like Div -->
+		<div class="mt-5 xl:gap-0 xl:hidden">
+			<div class="xl:relative">
+				<div class="mx-2 xl:absolute xl:top-5 xl:left-3">
+					<h1 class="font-bold font-serif text-lg">You may also like</h1>
+				</div>
+			</div>
+			<div
+				class="mt-3 whitespace-nowrap overflow-auto xl:grid-cols-4 xl:grid xl:w-full xl:whitespace-normal xl:h-full">
+				<a
+					class="py-2 px-2 w-40 bg-white inline-block border-solid border-gray-300 border-2 xl:flex xl:h-28"
+					><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048950/nvbt47kosvvuhxrt5bjz.png"
+						alt=""
+						class="size-36 xl:w-20 xl:h-20" />
+					<div>
+						<h1 class="font-sans text-lg">$10.30</h1>
+						<span class="font-sans whitespace-normal text-slate-400"
+							>Ipad with multiple color,64 GB</span
+						>
+					</div></a
+				>
+				<a
+					class="py-2 px-2 w-40 bg-white inline-block border-solid border-gray-300 border-2 xl:flex xl:h-28"
+					><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048950/nvbt47kosvvuhxrt5bjz.png"
+						alt=""
+						class="size-36 xl:w-20 xl:h-20" />
+					<div>
+						<h1 class="font-sans text-lg">$10.30</h1>
+						<span class="font-sans whitespace-normal text-slate-400"
+							>Ipad with multiple color,64 GB</span
+						>
+					</div></a
+				>
+				<a
+					class="py-2 px-2 w-40 bg-white inline-block border-solid border-gray-300 border-2 xl:flex xl:h-28"
+					><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048950/nvbt47kosvvuhxrt5bjz.png"
+						alt=""
+						class="size-36 xl:w-20 xl:h-20" />
+					<div>
+						<h1 class="font-sans text-lg">$10.30</h1>
+						<span class="font-sans whitespace-normal text-slate-400"
+							>Ipad with multiple color,64 GB</span
+						>
+					</div></a
+				>
+				<a
+					class="py-2 px-2 w-40 bg-white inline-block border-solid border-gray-300 border-2 xl:flex xl:h-28"
+					><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048950/nvbt47kosvvuhxrt5bjz.png"
+						alt=""
+						class="size-36 xl:w-20 xl:h-20" />
+					<div>
+						<h1 class="font-sans text-lg">$10.30</h1>
+						<span class="font-sans whitespace-normal text-slate-400"
+							>Ipad with multiple color,64 GB</span
+						>
+					</div></a
+				>
+				<a
+					class="py-2 px-2 w-40 bg-white inline-block border-solid border-gray-300 border-2 xl:flex xl:h-28"
+					><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048950/nvbt47kosvvuhxrt5bjz.png"
+						alt=""
+						class="size-36 xl:w-20 xl:h-20" />
+					<div>
+						<h1 class="font-sans text-lg">$10.30</h1>
+						<span class="font-sans whitespace-normal text-slate-400"
+							>Ipad with multiple color,64 GB</span
+						>
+					</div></a
+				>
+				<a
+					class="py-2 px-2 w-40 bg-white inline-block border-solid border-gray-300 border-2 xl:flex xl:h-28"
+					><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048950/nvbt47kosvvuhxrt5bjz.png"
+						alt=""
+						class="size-36 xl:w-20 xl:h-20" />
+					<div>
+						<h1 class="font-sans text-lg">$10.30</h1>
+						<span class="font-sans whitespace-normal text-slate-400"
+							>Ipad with multiple color,64 GB</span
+						>
+					</div></a
+				><a
+					class="py-2 px-2 w-40 bg-white inline-block border-solid border-gray-300 border-2 xl:flex xl:h-28"
+					><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048950/nvbt47kosvvuhxrt5bjz.png"
+						alt=""
+						class="size-36 xl:w-20 xl:h-20" />
+					<div>
+						<h1 class="font-sans text-lg">$10.30</h1>
+						<span class="font-sans whitespace-normal text-slate-400"
+							>Ipad with multiple color,64 GB</span
+						>
+					</div></a
+				>
+				<a
+					class="py-2 px-2 w-40 bg-white inline-block border-solid border-gray-300 border-2 xl:flex xl:h-28"
+					><img
+						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048950/nvbt47kosvvuhxrt5bjz.png"
+						alt=""
+						class="size-36 xl:w-20 xl:h-20" />
+					<div>
+						<h1 class="font-sans text-lg">$10.30</h1>
+						<span class="font-sans whitespace-normal text-slate-400"
+							>Ipad with multiple color,64 GB</span
+						>
+					</div></a
+				>
+			</div>
+		</div>
+
+		<!-- subscribe letter section -->
+		<div class="mt-10 font-sans text-center bg-slate-200 py-3">
+			<h1 class="font-bold text-xl">Subscribe to our newsletter</h1>
+			<h3 class="text-slate-500 px-1">
+				Get daily news on upcomming offers from many suppliers all over the
+				world
+			</h3>
+			<input
+				type="text"
+				placeholder="Email"
+				class="mt-4 border border-slate-200 px-2 py-1 rounded-md" />
+			<button class="py-1 px-2 bg-blue-600 text-white rounded-md">
+				Subscribe
+			</button>
+		</div>
+
+		<!-- Footer section -->
+		<footer class="mt-5 py-7 md:block xl:block bg-white px-7">
+			<div
+				class="grid grid-cols-2 gap-4 md:grid-cols-6 md:gap-4 xl:grid-cols-7 xl:gap-4">
+				<div class="col-span-2">
+					<i
+						class="fa-solid fa-bag-shopping text-white bg-blue-500 py-2 px-2 rounded-md"></i
+					><span class="text-blue-300 ml-3 text-2xl font-bold font-serif"
+						>Brand</span
+					>
+					<h3 class="mt-2 text-slate-600 text-xl">
+						Best information about the company gies here but now lorem ipsum is
+					</h3>
+					<i
+						class="fa-brands fa-facebook-f py-2 px-3 bg-slate-600 rounded-full text-white mt-3 ml-2"></i>
+					<i
+						class="fa-brands fa-twitter py-2 px-2 bg-slate-600 rounded-full text-white mt-3 ml-2"></i>
+					<i
+						class="fa-brands fa-linkedin-in py-2 px-2 bg-slate-600 rounded-full text-white mt-3 ml-2"></i>
+					<i
+						class="fa-brands fa-instagram py-2 px-2 bg-slate-600 rounded-full text-white mt-3 ml-2"></i>
+					<i
+						class="fa-brands fa-youtube py-2 px-2 bg-slate-600 rounded-full text-white mt-3 ml-2"></i>
+				</div>
+				<div>
+					<h1 class="font-bold">About</h1>
+					<div class="mt-2">
+						<a href="" class="text-slate-500">About Us</a><br />
+						<a href="" class="text-slate-500">Find store</a><br />
+						<a href="" class="text-slate-500">Categories</a><br />
+						<a href="" class="text-slate-500">Blogs</a>
+					</div>
+				</div>
+				<div>
+					<h1 class="font-bold">Partnership</h1>
+					<div class="mt-2">
+						<a href="" class="text-slate-500">About Us</a><br />
+						<a href="" class="text-slate-500">Find store</a><br />
+						<a href="" class="text-slate-500">Categories</a><br />
+						<a href="" class="text-slate-500">Blogs</a>
+					</div>
+				</div>
+				<div>
+					<h1 class="font-bold">Information</h1>
+					<div class="mt-2">
+						<a href="" class="text-slate-500">Help Center</a><br />
+						<a href="" class="text-slate-500">Money Refund</a><br />
+						<a href="" class="text-slate-500">Shipping</a><br />
+						<a href="" class="text-slate-500">Contact us</a>
+					</div>
+				</div>
+				<div>
+					<h1 class="font-bold">For users</h1>
+					<div class="mt-2">
+						<a href="" class="text-slate-500">Login</a><br />
+						<a href="" class="text-slate-500">Register</a><br />
+						<a href="" class="text-slate-500">Setting</a><br />
+						<a href="" class="text-slate-500">My Orders</a>
+					</div>
+				</div>
+				<div
+					class="text-center md:text-center md:w-full md:col-span-6 xl:col-span-1 xl:w-auto xl:text-left">
+					<h1 class="font-bold">Get app</h1>
+					<div class="mt-2">
+						<img
+							src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048304/sjciqb8wwaq4utxzhfib.png"
+							alt=""
+							class="md:ml-[40%] xl:ml-0" />
+						<img
+							src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732048641/y4ri0dczwmv8he4mhckb.png"
+							alt=""
+							class="mt-2 md:ml-[40%] xl:ml-0" />
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+
+	
+</html>

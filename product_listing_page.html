@@ -4,11 +4,12 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Product listing Page</title>
-		<script src="product_listing.js" defer></script>
+		<script src="product_listing.js" type="module" defer></script>
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-		<script src="https://cdn.tailwindcss.com" ></script>
+		<link rel="stylesheet" href="product_listing_page.css" />
+		<script  src="https://cdn.tailwindcss.com" ></script>
 	</head>
 	<body class="px-10 py-5 bg-slate-100">
 		<!-- Navbar section  -->
@@ -130,8 +131,8 @@
 
 		<!-- This div only uses for website responsive -->
 		<div class="block xl:grid xl:grid-cols-4 xl:gap-4">
-			<!-- Filter Section -->
 
+			<!-- Filter Section -->
 			<div>
 				<div class="hidden xl:block xl:col-span-1">
 					<div class="w-full p-4">
@@ -225,7 +226,12 @@
 									<i class="fa-solid fa-caret-down"></i>
 								</button>
 								<div id="priceRange" class="hidden px-3 pb-3">
-									<p class="text-sm text-gray-600">Price options go here.</p>
+									<p class="text-sm text-gray-600">
+										<div class="slidecontainer">
+											<input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+											<p>RS: <span id="demo"></span>$</p>
+										</div>
+									</p>
 								</div>
 							</div>
 
@@ -239,7 +245,9 @@
 								</button>
 								<div id="condition" class="hidden px-3 pb-3">
 									<p class="text-sm text-gray-600">
-										Condition options go here.
+										<input type="checkbox" class="mx-2">Brand New
+										<br>
+										<input type="checkbox" class="mx-2">Used
 									</p>
 								</div>
 							</div>
@@ -253,34 +261,27 @@
 									<i class="fa-solid fa-caret-down"></i>
 								</button>
 								<div id="ratings" class="hidden px-3 pb-3">
-									<p class="text-sm text-gray-600">Ratings options go here.</p>
+									<input type="checkbox" class="mx-2 text-sm text-gray-600">1 star</input><br>
+									<input type="checkbox" class="mx-2 text-sm text-gray-600">2 star</input><br>
+									<input type="checkbox" class="mx-2 text-sm text-gray-600">3 star</input><br>
+									<input type="checkbox" class="mx-2 text-sm text-gray-600">4 star</input><br>
+									<input type="checkbox" class="mx-2 text-sm text-gray-600">5 star</input>
 								</div>
 							</div>
 
-							<!-- Filter: Manufacturer -->
-							<div>
-								<button
-									class="w-full flex justify-between items-center p-3 text-gray-700 hover:bg-gray-100"
-									onclick="toggleDropdown('manufacturer')">
-									<span>Manufacturer</span>
-									<i class="fa-solid fa-caret-down"></i>
-								</button>
-								<div id="manufacturer" class="hidden px-3 pb-3">
-									<p class="text-sm text-gray-600">
-										Manufacturer options go here.
-									</p>
-								</div>
-							</div>
+							
 						</div>
 					</div>
 				</div>
+
+				<!-- Items Div -->
 				<div class="xl:hidden">
 					<div class="flex py-2 justify-between bg-white px-2">
 						<select class="border border-slate-400 rounded-md">
 							<option>
 								<span>
 									Sort: Newest
-									<img src="bar_sort.png" alt="" class="size-7 ml-1"
+									<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAbFBMVEX///8AAACTk5P6+vrNzc3S0tLs7Oyzs7Pn5+eXl5fDw8P29vZLS0uhoaF9fX0gICBbW1vZ2dng4OC6urqMjIyCgoLGxsYXFxcnJydjY2N3d3dnZ2caGhpSUlJGRkZBQUE6OjoPDw+np6dvb29G6LpyAAACAElEQVR4nO3diU7bQBQF0BjihJCFsDSlUEpL//8fW1ClOguKGXv8YnPOB0T3Kpl4LL2xRyMAAAAAAAAAAAAA0kxul2dDsJxeHOxXLorhWIz3C86iQ7XsbLfgXXSi1n3ZLngZnSeDzVbDr9FxMrivFhxHp8miHPQqfFX9s/kWHSaLh8E3fKw0XEWHyaJ6vZhGh8liWmk4iQ6Txbx6uXiITpPB9qbm/Fd0ntZd7exLL6IDtW6y03A0H9LNU1Gs57sF/ypX36NzteWxPNDv33ocgnfbAQAAAAAAAAB0aXI97tpNh5MT57OrkNmXp8uOCpYh9d6sOykYehzh/ni+xoIH9zr4Fn/ENixucxe8CS5YPOduGH+s69CwZJt+Rxcs3h+XbMc6umCR+6IYP8ie+ztcRhfMvg7D/0t/Zi44GkWPsWe/Hn6CPc3w96Wf4N7i9f4w5rjF0+Z4ttYM/B4fAAAAAAAAAKBjw37CZLn62IGL59neY15PWtIzaPdeInHCEkf3uhrYai75WdCr6OR1pY+yH3ihyylq8Ez2RXT2el7SG2af0G5Hk1n9fvxMm5y3mB7/+BPQ5MxM/iH0NjR5z8x1dPhamgx5R2evKf0I8F109Jo2yQ17c4+RuhL7sQrfpB2y7FHBpPcfrvqxn/nvY++wfBn3ZgkCAAAAAAAAAAAAUNsfo9wqQZAkqQoAAAAASUVORK5CYII=" alt="" class="size-7 ml-1"
 								/></span>
 							</option>
 							<option>Oldest</option>
@@ -289,7 +290,7 @@
 							>Filters(3)
 							<i class="fa-solid fa-filter size-7 ml-1 py-1 text-slate-400"></i
 						></span>
-						<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAOVBMVEX///8AAABDQ0NLS0vr6+vj4+NXV1dfX1/S0tKsrKxkZGSysrJdXV3Z2dnLy8umpqavr69sbGxvb2+4fpZ8AAABd0lEQVR4nO3cy3KCQBBAUfHBQzFi/v9jk43RDUJb0xShzlnbVXNx4QhT7HYAAAAAAAAAAAAbc6v3c9Xd62AXGLzld/RVxPk52IQG++yOW2g5VXV5DA7Bwe7dKgqog+tpHoOxb7Kq6uSQfXA9h8fgITi4FyLkf4dcj++1YyHtxOB14ZDjxOdOYyGnicGjkBghQpIIEZJEiJAkQoQkESIkiRAhSYQISSJESBIhQpIIWWtIe3rvayzka2KwXThkrtU/sRIipLCPTz7EjqLkn3zoguv5O4tyCQ4OySG7c2g538/Be2jwnt3xe2mbw1zNpcggAKzQ0Of/IPbpG5To5u9lpxHbopzHV1DGYpvG1R5gXts2fjN/rIQISQ7ZzA26zdwyFSKkMCFCkggRkkSIkCRChCQRIiSJECFJhAhJIkRIEiFCkmzuBS9zrf6JlRAhhW3m1W2beZle8Mq+nA6KnXxuxldQSuS9kcOng+nfBwAAAAAAAAAAwNJ+APOJJGMj2BHUAAAAAElFTkSuQmCC" alt="" class="size-7 bg-white" />
+						<img src="data:image/jpeg;base64,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" alt="" class="size-7 bg-white" />
 					</div>
 					<div class="mt-2">
 						<span

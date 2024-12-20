@@ -1,267 +1,4 @@
-const items = [
-	{
-		id: 1,
-		title: "T-shirts with multiple colors, for men",
-		price: 10.3,
-		description:
-			"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-		category: "men's clothing",
-		image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-		rating: {
-			rate: 3,
-			count: 120,
-		},
-	},
-	{
-		id: 2,
-		title: "T-shirts with multiple colors, for men",
-		price: 10.3,
-		description:
-			"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-		category: "men's clothing",
-		image:
-			"https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
-		rating: {
-			rate: 4,
-			count: 120,
-		},
-	},
-	{
-		id: 3,
-		title: "T-shirts with multiple colors, for men",
-		price: 10.3,
-		description:
-			"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-		category: "men's clothing",
-		image: "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
-		rating: {
-			rate: 3,
-			count: 120,
-		},
-	},
-	{
-		id: 4,
-		title: "T-shirts with multiple colors, for men",
-		price: 10.3,
-		description:
-			"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-		category: "men's clothing",
-		image: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
-		rating: {
-			rate: 3,
-			count: 120,
-		},
-	},
-	{
-		id: 5,
-		title: "T-shirts with multiple colors, for men",
-		price: 10.3,
-		description:
-			"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-		category: "men's clothing",
-		image: "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
-		rating: {
-			rate: 5,
-			count: 120,
-		},
-	},
-	{
-		id: 6,
-		title: "T-shirts with multiple colors, for men",
-		price: 10.3,
-		description:
-			"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-		category: "men's clothing",
-		image: "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
-		rating: {
-			rate: 2,
-			count: 120,
-		},
-	},
-	{
-		id: 7,
-		title: "T-shirts with multiple colors, for men",
-		price: 10.3,
-		description:
-			"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-		category: "men's clothing",
-		image: "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
-		rating: {
-			rate: 3,
-			count: 120,
-		},
-	},
-	{
-		id: 8,
-		title: "T-shirts with multiple colors, for men",
-		price: 10.3,
-		description:
-			"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-		category: "men's clothing",
-		image: "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
-		rating: {
-			rate: 1,
-			count: 120,
-		},
-	},
-	{
-		id: 9,
-		title: "T-shirts with multiple colors, for men",
-		price: 10.3,
-		description:
-			"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-		category: "men's clothing",
-		image: "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
-		rating: {
-			rate: 3,
-			count: 120,
-		},
-	},
-	{
-		id: 10,
-		title: "T-shirts with multiple colors, for men",
-		price: 10.3,
-		description:
-			"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-		category: "men's clothing",
-		image: "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
-		rating: {
-			rate: 3,
-			count: 120,
-		},
-	},
-	{
-		id: 11,
-		title: "T-shirts with multiple colors, for men",
-		price: 10.3,
-		description:
-			"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-		category: "men's clothing",
-		image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-		rating: {
-			rate: 3,
-			count: 120,
-		},
-	},
-	{
-		id: 12,
-		title: "T-shirts with multiple colors, for men",
-		price: 10.3,
-		description:
-			"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-		category: "men's clothing",
-		image:
-			"https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
-		rating: {
-			rate: 4,
-			count: 120,
-		},
-	},
-	{
-		id: 13,
-		title: "T-shirts with multiple colors, for men",
-		price: 10.3,
-		description:
-			"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-		category: "men's clothing",
-		image: "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
-		rating: {
-			rate: 3,
-			count: 120,
-		},
-	},
-	{
-		id: 14,
-		title: "T-shirts with multiple colors, for men",
-		price: 10.3,
-		description:
-			"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-		category: "men's clothing",
-		image: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
-		rating: {
-			rate: 3,
-			count: 120,
-		},
-	},
-	{
-		id: 15,
-		title: "T-shirts with multiple colors, for men",
-		price: 10.3,
-		description:
-			"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-		category: "men's clothing",
-		image: "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
-		rating: {
-			rate: 5,
-			count: 120,
-		},
-	},
-	{
-		id: 16,
-		title: "T-shirts with multiple colors, for men",
-		price: 10.3,
-		description:
-			"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-		category: "men's clothing",
-		image: "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
-		rating: {
-			rate: 2,
-			count: 120,
-		},
-	},
-	{
-		id: 17,
-		title: "T-shirts with multiple colors, for men",
-		price: 10.3,
-		description:
-			"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-		category: "men's clothing",
-		image: "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
-		rating: {
-			rate: 3,
-			count: 120,
-		},
-	},
-	{
-		id: 18,
-		title: "T-shirts with multiple colors, for men",
-		price: 10.3,
-		description:
-			"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-		category: "men's clothing",
-		image: "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
-		rating: {
-			rate: 1,
-			count: 120,
-		},
-	},
-	{
-		id: 19,
-		title: "T-shirts with multiple colors, for men",
-		price: 10.3,
-		description:
-			"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-		category: "men's clothing",
-		image: "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
-		rating: {
-			rate: 3,
-			count: 120,
-		},
-	},
-	{
-		id: 20,
-		title: "T-shirts with multiple colors, for men",
-		price: 10.3,
-		description:
-			"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-		category: "men's clothing",
-		image: "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
-		rating: {
-			rate: 2,
-			count: 120,
-		},
-	},
-];
+import { items } from "./products.js";
 
 const itemsPerPage = 10; // Number of items per page
 let currentPage = 1;
@@ -284,6 +21,13 @@ function displayItems() {
 		div.id = item.id;
 		div.className =
 			"shadow-md transition-all hover:shadow-slate-500 bg-white xl:border-2 xl:border-solid xl:border-slate-200";
+
+		// Add click event to pass the id
+		div.addEventListener("click", () => {
+			// Pass the item.id to another function
+			navigateToProductPage(item.id);
+		});
+
 		container.appendChild(div);
 		const gettingDiv = document.getElementById(item.id);
 
@@ -295,7 +39,7 @@ function displayItems() {
 		sub_div.className = "py-1 px-4 mt-4 mb-2";
 
 		const price = document.createElement("h3");
-		price.textContent = item.price;
+		price.textContent = item.price + "$";
 		price.className = "font-bold";
 
 		const rating_stars_span = document.createElement("span");
@@ -322,6 +66,15 @@ function displayItems() {
 		getting_Subdiv.appendChild(rating_words);
 		getting_Subdiv.appendChild(title);
 	});
+
+	// Function in another file to handle navigation
+	function navigateToProductPage(productId) {
+		// Save the productId in sessionStorage or pass it via URL
+		sessionStorage.setItem("selectedProductId", productId);
+
+		// Redirect to the product description page
+		window.location.href = "product_description_page.html";
+	}
 
 	const page_info = document.getElementById("pagination-info");
 	page_info.innerHTML = "";
@@ -350,9 +103,18 @@ document.getElementById("next-button").addEventListener("click", () => {
 // Initial display
 displayItems();
 
-function toggleDropdown(id) {
+window.toggleDropdown = function (id) {
 	const dropdown = document.getElementById(id);
 	const icon = document.getElementById(`icon-${id}`);
 	dropdown.classList.toggle("hidden");
 	icon.classList.toggle("rotate-180");
-}
+};
+
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function () {
+	output.innerHTML = this.value;
+	console.log(slider.value);
+};

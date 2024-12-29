@@ -5,31 +5,113 @@ const prevButton = document.getElementById("prev");
 const nextButton = document.getElementById("next");
 const dots = document.querySelectorAll("#dots button");
 const rating = document.getElementById("rating");
+const web_addbtn = document.getElementById("web_add_btn");
+const web_save_btn = document.getElementById("web_save_btn");
+const category_defining_span = document.getElementById(
+	"category_defining_span"
+);
 let currentIndex = 0;
+let cart = [];
+let saveforlater = [];
+
+window.onload = () => {
+	const storedCart = localStorage.getItem("cart");
+	if (storedCart) {
+		cart = JSON.parse(storedCart); // Parse the JSON string into an array
+		console.log("Cart loaded:", cart);
+	}
+};
+
+// Save cart to localStorage
+const saveCartToStorage = () => {
+	localStorage.setItem("cart", JSON.stringify(cart)); // Convert the array to a JSON string
+};
+
+//add to cart function
+const addToCart = (product_id) => {
+	let positionThisProductInCart = cart.findIndex(
+		(value) => value.product_id == product_id
+	);
+	if (cart.length <= 0) {
+		cart = [
+			{
+				product_id: product_id,
+				quantity: 1,
+			},
+		];
+	} else if (positionThisProductInCart < 0) {
+		cart.push({
+			product_id: product_id,
+			quantity: 1,
+		});
+	} else {
+		cart[positionThisProductInCart].quantity =
+			cart[positionThisProductInCart].quantity + 1;
+	}
+	saveCartToStorage(); // Save the updated cart
+	console.log(cart);
+};
+
+// Load save for later from localStorage when the page loads
+window.onload = () => {
+	const storedSaveForLater = localStorage.getItem("saveforlater");
+	if (storedSaveForLater) {
+		saveforlater = JSON.parse(storedSaveForLater); // Parse the JSON string into an array
+	}
+};
+
+// Save for later to localStorage
+const saveForLaterToStorage = () => {
+	localStorage.setItem("saveforlater", JSON.stringify(saveforlater)); // Convert the array to a JSON string
+};
+
+//add to save for later function
+const addSaveToLater = (product_id) => {
+	let positionThisProductInSaveToLater = saveforlater.findIndex(
+		(value) => value.product_id == product_id
+	);
+
+	if (positionThisProductInSaveToLater < 0) {
+		saveforlater.push({
+			product_id: product_id,
+		});
+	} else {
+		console.log("Product already in Save For Later");
+		return;
+	}
+
+	saveForLaterToStorage(); // Save the updated saveforlater array
+	console.log("Updated Save For Later:", saveforlater);
+};
 
 if (productId) {
 	// Fetch or filter the product data using the productId
 	const selectedProduct = items.find((item) => item.id == productId);
-	console.log(selectedProduct);
 	if (selectedProduct) {
 		// Render the selected product's data (images, details, etc.)
 		displayProductDetails(selectedProduct);
 	}
+	web_addbtn.onclick = () => addToCart(productId);
+
+	web_save_btn.onclick = () => addSaveToLater(productId);
 }
 
 function displayProductDetails(product) {
+	category_defining_span.innerText = "home >" + product.category;
 	carousel.innerHTML = ""; // Clear previous items
 	const imageArray = Object.values(product.images); // Converts to an array
 	for (let i = 0; i < imageArray.length; i++) {
 		const image = document.createElement("img");
 		image.src = imageArray[i]; // Use the current image URL
-		image.className = "w-96 object-cover flex-shrink-0 mt-2 customcss";
+		image.className =
+			"xl:w-full object-cover flex-shrink-0 mt-2 customcss md:w-full md:h-full";
 		carousel.appendChild(image); // Append the image to the carousel
 	}
 
 	const web_product_name = document.createElement("h1");
 	web_product_name.innerText = product.title;
-	web_product_name.className = "py-2 hidden xl:block font-bold text-3xl";
+	web_product_name.className =
+		"py-2 hidden md:block xl:block font-bold text-3xl";
 	rating.appendChild(web_product_name);
 	for (let i = 0; i < product.rating.rate; i++) {
 		const stars = document.createElement("i");
@@ -44,7 +126,7 @@ function displayProductDetails(product) {
 
 	const product_name = document.createElement("h1");
 	product_name.innerText = product.title;
-	product_name.className = "py-3 xl:hidden";
+	product_name.className = "py-3 md:hidden";
 	rating.appendChild(product_name);
 
 	const price = document.createElement("span");
@@ -77,11 +159,21 @@ function displayProductDetails(product) {
 	web_price3.className = "hidden py-3 xl:flex pl-2";
 	find_web_price_div.appendChild(web_price3);
 
-	const inquiry_btn = document.createElement("button");
-	inquiry_btn.innerText = "Send inquiry";
-	inquiry_btn.className =
+	const addtocart_btn = document.createElement("button");
+	addtocart_btn.innerText = "Add To Cart";
+	addtocart_btn.onclick = () => addToCart(productId);
+
+	addtocart_btn.className =
 		" mt-4 rounded-lg py-3 w-full text-white bg-blue-500 xl:hidden";
-	rating.appendChild(inquiry_btn);
+	rating.appendChild(addtocart_btn);
+
+	const savelater_btn = document.createElement("button");
+	savelater_btn.innerText = "Save for later";
+	savelater_btn.onclick = () => addSaveToLater(productId);
+
+	savelater_btn.className =
+		" mt-4 rounded-lg py-3 w-full text-white bg-blue-500 xl:hidden";
+	rating.appendChild(savelater_btn);
 
 	const condition = document.createElement("h1");
 	condition.innerText = "Condition: " + product.condition;
@@ -108,7 +200,6 @@ function displayProductDetails(product) {
 	description.className = "text-lg xl:hidden";
 	rating.appendChild(description);
 }
-
 // Update carousel position
 function updateCarousel() {
 	const width = carousel.offsetWidth;

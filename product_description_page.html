@@ -17,51 +17,65 @@
 		<nav class="bg-white pb-2 md:pb-3 px-3">
 			<div class="flex justify-between">
 				<div class="flex mt-4">
-					<i class="fa-solid fa-arrow-left fa-lg mt-3 xl:hidden"></i>
+					<i class="fa-solid fa-arrow-left fa-lg mt-3 md:hidden"></i>
 					<a href="index.html"
 						><img
 							src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732049107/mjtj07ngvughbpiu38hd.png"
 							alt=""
-							class="hidden xl:block h-7 bg-blue-500 mx-2 py-1 px-1 rounded-md shadow-md shadow-blue-400"
+							class="hidden md:block h-7 bg-blue-500 mx-2 py-1 px-1 rounded-md shadow-md shadow-blue-400"
 					/></a>
 					<a
 						href="index.html"
-						class="hidden xl:block text-blue-500 font-serif font-bold text-xl">
+						class="hidden md:block text-blue-500 font-serif font-bold text-xl">
 						Brand
 					</a>
 				</div>
 
 				<div
 					class="hidden xl:flex border-blue-500 border-2 rounded-md text-center h-full mt-4">
-					<input type="text" placeholder="Search" class="px-2 w-96 py-1" />
+					<input
+						type="text"
+						placeholder="Search"
+						id="searchproducts"
+						class="px-2 w-96 py-1" />
 					<select class="border-blue-400 border-l-2">
 						<option>All category</option>
 						<option>Electronics</option>
 						<option>Toys</option>
 						<option>Women's clothing</option>
 					</select>
-					<button class="text-center bg-blue-600 px-4 rounded-sm text-white">
+					<button
+						class="text-center bg-blue-600 px-4 rounded-sm text-white"
+						id="searchbtn">
 						Search
 					</button>
 				</div>
 
 				<div class="flex gap-2 mt-4">
 					<div class="text-center">
-						<i class="fa-solid fa-cart-shopping fa-lg xl:text-gray-400"></i>
-						<h1 class="hidden xl:block xl:text-gray-400">My cart</h1>
+						<a href="cart.html"
+							><i class="fa-solid fa-cart-shopping fa-lg xl:text-gray-400"></i
+						></a>
+						<h1 class="hidden md:block xl:text-gray-400">My cart</h1>
 					</div>
-					<div class="text-center">
-						<i class="fa-solid fa-user fa-lg xl:text-gray-400"></i>
-						<h1 class="hidden xl:block xl:text-gray-400">profile</h1>
-					</div>
-					<div class="text-center hidden md:block xl:block">
-						<i class="fa-solid fa-message fa-lg xl:text-gray-400"></i>
-						<h1 class="xl:text-gray-400">Message</h1>
-					</div>
-					<div class="text-center hidden md:block xl:block">
-						<i class="fa-solid fa-heart fa-lg xl:text-gray-400"></i>
-						<h1 class="xl:text-gray-400">Orders</h1>
-					</div>
+					<a href="signin.html"
+						><div class="text-center">
+							<i class="fa-solid fa-user fa-lg xl:text-gray-400"></i>
+							<h1 class="hidden md:block xl:text-gray-400">profile</h1>
+						</div></a
+					>
+					<a href="product_listing_page.html"
+						><div class="text-center hidden md:block xl:block">
+							<i class="fa-solid fa-box fa-lg xl:text-gray-400"></i>
+							<h1 class="xl:text-gray-400">products</h1>
+						</div></a
+					>
+					<a href="cart.html"
+						><div class="text-center hidden md:block xl:block">
+							<i class="fa-solid fa-heart fa-lg xl:text-gray-400"></i>
+							<h1 class="xl:text-gray-400">Orders</h1>
+						</div></a
+					>
 				</div>
 			</div>
 		</nav>
@@ -79,32 +93,22 @@
 				<a
 					href="product_listing_page.html"
 					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
-					>Gadgets</a
+					>ladies accessories</a
 				>
 				<a
 					href="product_listing_page.html"
 					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
-					>Clothes</a
+					>men's clothing</a
 				>
 				<a
 					href="product_listing_page.html"
 					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
-					>Hot offers</a
+					>men's accessories</a
 				>
 				<a
 					href="product_listing_page.html"
 					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
-					>Gift boxes</a
-				>
-				<a
-					href="product_listing_page.html"
-					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
-					>Projects</a
-				>
-				<a
-					href="product_listing_page.html"
-					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
-					>Menu item</a
+					>electonics accessories</a
 				>
 			</div>
 			<div class="xl:flex gap-3 hidden text-sm">
@@ -125,7 +129,7 @@
 
 		<!-- Category Defining Section -->
 		<div class="hidden xl:block xl:py-3 xl:px-4">
-			<span class="text-slate-500"
+			<span class="text-slate-500" id="category_defining_span"
 				>Home > Clothing > Men's wear > Summer Clothing</span
 			>
 		</div>
@@ -137,7 +141,7 @@
 					<!-- Carousel Container -->
 					<div
 						id="carousel"
-						class="flex transition-transform duration-500 h-64 xl:h-full w-full"></div>
+						class="flex transition-transform duration-500 h-64 md:h-full xl:h-full w-full"></div>
 
 					<!-- Navigation Arrows -->
 
@@ -190,10 +194,18 @@
 					<h1 class="xl:mt-3">
 						<i class="fa-solid fa-globe mr-2"></i>Shipping
 					</h1>
-					<button
-						class="hidden xl:w-full xl:block mt-10 bg-blue-500 py-2 px-2 rounded-lg text-white">
-						Send inquiry
-					</button>
+					<div class="flex gap-2">
+						<button
+							class="hidden xl:w-full xl:block mt-10 bg-blue-500 py-2 px-2 rounded-lg text-white"
+							id="web_add_btn">
+							Add To Cart
+						</button>
+						<button
+							class="hidden xl:w-full xl:block mt-10 bg-blue-500 py-2 px-2 rounded-lg text-white"
+							id="web_save_btn">
+							Save for later
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>

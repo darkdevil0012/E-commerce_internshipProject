@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sign Up Page</title>
+		<link rel="stylesheet" href="signup.css" />
+	</head>
+	<body>
+		<div class="main_div">
+			<h1>Sign Up Page</h1>
+			<input type="text" placeholder="Name" id="name" />
+			<input type="email" placeholder="Email" id="email" />
+			<input type="password" placeholder="Password" id="password" />
+			<input type="password" placeholder="Re-enter Password" id="re_password" />
+			<a href="signin.html"><h2>Already have an account?</h2></a>
+
+			<button onclick="Signin()">Sign Up</button>
+			<button onclick="shop()" id="shopnow_btn">Shop now</button>
+		</div>
+	</body>
+	<script>
+		const name = document.getElementById("name");
+		const email = document.getElementById("email");
+		const password = document.getElementById("password");
+		const re_password = document.getElementById("re_password");
+
+		function Signin() {
+			let account = [];
+			if (
+				name.value == "" ||
+				email.value == "" ||
+				password.value == "" ||
+				re_password.value == ""
+			) {
+				alert("Plz fill all the field");
+			} else if (password.value != re_password.value) {
+				alert("Both password do not match");
+			} else {
+				account.push({
+					name: name.value,
+					email: email.value,
+					password: password.value,
+				});
+				localStorage.setItem("account", JSON.stringify(account)); // Convert the array to a JSON string
+
+				alert("successfully sign up");
+				window.location.href = "signin.html";
+			}
+		}
+		function shop() {
+			window.location.href = "index.html";
+		}
+	</script>
+</html>

@@ -1,10 +1,77 @@
 import { items } from "./products.js";
+const category_select = document.getElementById("category_select");
+let products = [];
+let filteredProducts = [];
+const product_search = document.getElementById("product_search");
+const mobile_product_search = document.getElementById("mobile_product_search");
+const search_btn = document.getElementById("search_btn");
+const category_defining_span = document.getElementById(
+	"category_defining_span"
+);
+let search_value;
+let mobile_search_value;
+let check_searchbtn_clicked = false;
+product_search.addEventListener("input", (e) => {
+	search_value = e.target.value.toLowerCase();
+});
 
+mobile_product_search.addEventListener("input", (e) => {
+	filteredProducts = [];
+	mobile_search_value = e.target.value.toLowerCase();
+	products.forEach((product) => {
+		category_defining_span.innerText = "Home > " + mobile_search_value;
+		const visible = product.title.toLowerCase().includes(mobile_search_value);
+		if (visible) {
+			filteredProducts.push(product);
+		}
+	});
+	check_searchbtn_clicked = true;
+	displayItems(filteredProducts);
+});
+
+search_btn.onclick = () => {
+	filteredProducts = [];
+	if (search_value == null) {
+		displayItems(products);
+		category_defining_span.innerText = "Home > all";
+	} else {
+		products.forEach((product) => {
+			category_defining_span.innerText = "Home > " + search_value;
+			const visible = product.title.toLowerCase().includes(search_value);
+			if (visible) {
+				filteredProducts.push(product);
+			}
+		});
+		check_searchbtn_clicked = true;
+		displayItems(filteredProducts);
+	}
+};
+
+category_select.addEventListener("change", () => {
+	category_defining_span.innerText = "Home > " + category_select.value;
+	filteredProducts = [];
+	if (category_select.value == "all") {
+		displayItems(products);
+	} else {
+		for (let i = 0; i < products.length; i++) {
+			if (category_select.value == products[i].category) {
+				filteredProducts.push(products[i]);
+				console.log(filteredProducts);
+			}
+		}
+		displayItems(filteredProducts);
+		check_searchbtn_clicked = true;
+	}
+});
 const itemsPerPage = 10; // Number of items per page
 let currentPage = 1;
 
+function fetchAllProducts() {
+	products = items.slice();
+}
+
 // Function to display items of the current page
-function displayItems() {
+function displayItems(product) {
 	const container = document.getElementById("item-container");
 	container.innerHTML = ""; // Clear previous items
 
@@ -13,8 +80,17 @@ function displayItems() {
 	const endIndex = startIndex + itemsPerPage;
 
 	// Slice items for the current page
-	const itemsToDisplay = items.slice(startIndex, endIndex);
-
+	const itemsToDisplay = product.slice(startIndex, endIndex);
+	if (product.length == 0) {
+		const noProduct_div = document.createElement("div");
+		const h1 = document.createElement("h1");
+		h1.innerText =
+			"We're sorry. We cannot find any matches for your search term.";
+		h1.className = "text-2xl font-semibold";
+		noProduct_div.appendChild(h1);
+		container.appendChild(noProduct_div);
+		return;
+	}
 	// Append items to the container
 	itemsToDisplay.forEach((item) => {
 		const div = document.createElement("div");
@@ -82,26 +158,37 @@ function displayItems() {
 
 	// Enable/Disable buttons
 	document.getElementById("prev-button").disabled = currentPage === 1;
-	document.getElementById("next-button").disabled = endIndex >= items.length;
+	document.getElementById("next-button").disabled = endIndex >= product.length;
 }
 
 // // Event listeners for navigation buttons
 document.getElementById("prev-button").addEventListener("click", () => {
 	if (currentPage > 1) {
 		currentPage--;
-		displayItems();
+		if (check_searchbtn_clicked) {
+			displayItems(filteredProducts);
+		} else {
+			displayItems(products);
+		}
 	}
 });
 
 document.getElementById("next-button").addEventListener("click", () => {
 	if (currentPage * itemsPerPage < items.length) {
 		currentPage++;
-		displayItems();
+		if (check_searchbtn_clicked) {
+			displayItems(filteredProducts);
+		} else {
+			displayItems(products);
+		}
 	}
 });
 
 // Initial display
-displayItems();
+window.onload = () => {
+	fetchAllProducts();
+	displayItems(products);
+};
 
 window.toggleDropdown = function (id) {
 	const dropdown = document.getElementById(id);

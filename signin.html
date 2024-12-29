@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sign In Page</title>
+
+		<link rel="stylesheet" href="signin.css" />
+	</head>
+	<body>
+		<div class="main_div">
+			<h1>Sign In Page</h1>
+			<input type="email" placeholder="Email" id="email" />
+			<input type="password" placeholder="Password" id="password" />
+			<a href="signup.html"><h2>Create new account</h2></a>
+			<button id="signin_btn" onclick="login()">Sign In</button>
+			<button onclick="shop()" id="shopnow_btn">Shop now</button>
+		</div>
+	</body>
+	<script>
+		const input_email = document.getElementById("email");
+		const input_password = document.getElementById("password");
+		const storedaccount = localStorage.getItem("account");
+		let accounts = [];
+		accounts = JSON.parse(storedaccount);
+		function login() {
+			if (input_email.value == "" || input_password == "") {
+				alert("Plz fill all the field");
+			} else {
+				if (accounts == null) {
+					alert("No user exsist. Sign up first");
+					window.location.href = "signup.html";
+				} else if (
+					input_email.value == accounts[0].email ||
+					input_password.value == accounts[0].password
+				) {
+					localStorage.setItem("user", JSON.stringify(accounts)); // Convert the array to a JSON string
+					alert("logged in");
+					window.location.href = "index.html";
+				} else {
+					alert("email or password do not match");
+				}
+			}
+		}
+		function shop() {
+			window.location.href = "index.html";
+		}
+	</script>
+</html>

@@ -9,66 +9,87 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 		<link rel="stylesheet" href="product_listing_page.css" />
-		<script  src="https://cdn.tailwindcss.com" ></script>
+		<script src="https://cdn.tailwindcss.com"></script>
 	</head>
 	<body class="px-10 py-5 bg-slate-100">
 		<!-- Navbar section  -->
 		<nav class="bg-white pb-0 md:pb-3 px-3">
 			<div class="flex justify-between">
 				<div class="flex mt-4">
-					<i class="fa-solid fa-arrow-left fa-lg mt-3 xl:hidden"></i>
-					<h1 class="font-sans text-base px-1 xl:hidden">Mobile accessory</h1>
-					<a href="index.html"><img
-						src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732049107/mjtj07ngvughbpiu38hd.png"
-						alt=""
-						class="hidden xl:block h-7 bg-blue-500 mx-2 py-1 px-1 rounded-md shadow-md shadow-blue-400" /></a>
-						<a href="index.html"><h1 class="hidden xl:block text-blue-500 font-serif font-bold text-xl">Brand</h1></a>
+					<i class="fa-solid fa-arrow-left fa-lg mt-3 md:hidden"></i>
+					<h1 class="font-sans text-base px-1 md:hidden">Mobile accessory</h1>
+					<a href="index.html"
+						><img
+							src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732049107/mjtj07ngvughbpiu38hd.png"
+							alt=""
+							class="hidden md:block xl:block h-7 bg-blue-500 mx-2 py-1 px-1 rounded-md shadow-md shadow-blue-400"
+					/></a>
+					<a href="index.html"
+						><h1
+							class="hidden md:block xl:block text-blue-500 font-serif font-bold text-xl">
+							Brand
+						</h1></a
+					>
 				</div>
 
 				<div
-					class="hidden xl:flex border-blue-500 border-2 rounded-md text-center h-full mt-4">
-					<input type="text" placeholder="Search" class="px-2 w-96 py-1" />
-					<select class="border-blue-400 border-l-2">
-						<option>All category</option>
-						<option>Electronics</option>
-						<option>Toys</option>
-						<option>Women's clothing</option>
+					class="hidden md:flex xl:flex border-blue-500 border-2 rounded-md text-center h-full mt-4">
+					<input
+						type="text"
+						placeholder="Search"
+						class="px-2 xl:w-96 md:w-40 py-1"
+						id="product_search" />
+					<select
+						class="border-blue-400 border-l-2 md:w-32 xl:w-40"
+						id="category_select">
+						<option value="all">All category</option>
+						<option value="ladies accessories">ladies accessories</option>
+						<option value="men's clothing">men's clothing</option>
+						<option value="men's accessories">men's accessories</option>
+						<option value="electonics accessories">
+							electonics accessories
+						</option>
 					</select>
-					<button class="text-center bg-blue-600 px-4 rounded-sm text-white">
+					<button
+						class="text-center bg-blue-600 px-4 rounded-sm text-white"
+						id="search_btn">
 						Search
 					</button>
 				</div>
 
 				<div class="flex gap-2 mt-4">
-					<div class="text-center">
-						<i class="fa-solid fa-cart-shopping fa-lg xl:text-gray-400"></i>
-						<h1 class="hidden xl:block xl:text-gray-400">My cart</h1>
-					</div>
-					<div class="text-center">
-						<i class="fa-solid fa-user fa-lg xl:text-gray-400"></i>
-						<h1 class="hidden xl:block xl:text-gray-400">profile</h1>
-					</div>
-					<div class="text-center hidden md:block xl:block">
-						<i class="fa-solid fa-message fa-lg xl:text-gray-400"></i>
-						<h1 class="xl:text-gray-400">Message</h1>
-					</div>
-					<div class="text-center hidden md:block xl:block">
-						<i class="fa-solid fa-heart fa-lg xl:text-gray-400"></i>
-						<h1 class="xl:text-gray-400">Orders</h1>
-					</div>
+					<a href="cart.html" class="md:hidden xl:block">
+						<div class="text-center">
+							<i class="fa-solid fa-cart-shopping fa-lg xl:text-gray-400"></i>
+							<h1 class="hidden xl:block xl:text-gray-400">My cart</h1>
+						</div></a
+					>
+					<a href="signin.html" class="md:hidden xl:block">
+						<div class="text-center">
+							<i class="fa-solid fa-user fa-lg xl:text-gray-400"></i>
+							<h1 class="hidden xl:block xl:text-gray-400">profile</h1>
+						</div></a
+					>
+					<a href="product_listing_page.html">
+						<div class="text-center hidden md:block xl:block">
+							<i class="fa-solid fa-box fa-lg xl:text-gray-400"></i>
+							<h1 class="xl:text-gray-400">Products</h1>
+						</div></a
+					>
+					<a href="cart.html">
+						<div class="text-center hidden md:block xl:block">
+							<i class="fa-solid fa-heart fa-lg xl:text-gray-400"></i>
+							<h1 class="xl:text-gray-400">Orders</h1>
+						</div></a
+					>
 				</div>
 			</div>
-			<div class="xl:hidden">
+			<div class="md:hidden">
 				<input
 					type="text"
 					placeholder="Search"
+					id="mobile_product_search"
 					class="border-gray-400 border-2 my-5 size-full py-1 px-1" />
-				<select class="hidden">
-					<option>All category</option>
-					<option>Electronics</option>
-					<option>Toys</option>
-					<option>Women's clothing</option>
-				</select>
 			</div>
 		</nav>
 
@@ -77,33 +98,31 @@
 			class="text-center whitespace-nowrap px-2 overflow-auto pt-1 xl:text-left xl:flex xl:justify-between bg-white border border-slate-300">
 			<div class="">
 				<i class="hidden fa-solid fa-bars fa-lg mt-3 xl:inline-block"></i>
+
 				<a
+					href="product_listing_page.html"
 					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
 					>All category</a
 				>
 				<a
+					href="product_listing_page.html"
 					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
-					>Gadgets</a
+					>ladies accessories</a
 				>
 				<a
+					href="product_listing_page.html"
 					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
-					>Clothes</a
+					>men's clothing</a
 				>
 				<a
+					href="product_listing_page.html"
 					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
-					>Hot offers</a
+					>men's accessories</a
 				>
 				<a
+					href="product_listing_page.html"
 					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
-					>Gift boxes</a
-				>
-				<a
-					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
-					>Projects</a
-				>
-				<a
-					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
-					>Menu item</a
+					>electonics accessories</a
 				>
 			</div>
 			<div class="xl:flex gap-3 hidden text-sm">
@@ -124,33 +143,38 @@
 
 		<!-- Category Defining Section -->
 		<div class="hidden xl:block xl:py-3">
-			<span class="text-slate-500"
-				>Home > Clothing > Men's wear > Summer Clothing</span
-			>
+			<span class="text-slate-500" id="category_defining_span">Home > all</span>
 		</div>
 
 		<!-- This div only uses for website responsive -->
 		<div class="block xl:grid xl:grid-cols-4 xl:gap-4">
-
 			<!-- Filter Section -->
 			<div>
 				<div class="hidden xl:block xl:col-span-1">
 					<div class="w-full p-4">
-						<h3 class="text-lg font-semibold text-gray-700 mb-3">Category</h3>
+						<h3 class="text-lg font-semibold text-gray-700 mb-3">
+							All category
+						</h3>
 						<ul class="space-y-2">
 							<li>
 								<a href="#" class="hover:text-blue-800 text-sm"
-									>Mobile accessory</a
+									>ladies accessories</a
 								>
 							</li>
 							<li>
-								<a href="#" class="hover:text-blue-800 text-sm">Electronics</a>
+								<a href="#" class="hover:text-blue-800 text-sm"
+									>men's clothing</a
+								>
 							</li>
 							<li>
-								<a href="#" class="hover:text-blue-800 text-sm">Smartphones</a>
+								<a href="#" class="hover:text-blue-800 text-sm"
+									>men's accessories</a
+								>
 							</li>
 							<li>
-								<a href="#" class="hover:text-blue-800 text-sm">Modern tech</a>
+								<a href="#" class="hover:text-blue-800 text-sm"
+									>electonics accessories</a
+								>
 							</li>
 							<li>
 								<a
@@ -166,19 +190,29 @@
 						</h3>
 						<ul class="space-y-2">
 							<li>
-								<input type="checkbox"><label for="" class="ml-2">Samsung</label></input>
+								<input type="checkbox" /><label for="" class="ml-2"
+									>Samsung</label
+								>
 							</li>
 							<li>
-								<input type="checkbox"><label for="" class="ml-2">Apple</label></input>
+								<input type="checkbox" /><label for="" class="ml-2"
+									>Apple</label
+								>
 							</li>
 							<li>
-								<input type="checkbox"><label for="" class="ml-2">Huawei</label></input>
+								<input type="checkbox" /><label for="" class="ml-2"
+									>Huawei</label
+								>
 							</li>
 							<li>
-								<input type="checkbox" ><label for="" class="ml-2">Pocco</label></input>
+								<input type="checkbox" /><label for="" class="ml-2"
+									>Pocco</label
+								>
 							</li>
 							<li>
-								<input type="checkbox" ><label for="" class="ml-2">Lenovo</label></input>
+								<input type="checkbox" /><label for="" class="ml-2"
+									>Lenovo</label
+								>
 							</li>
 							<li>
 								<a
@@ -193,19 +227,29 @@
 						</h3>
 						<ul class="space-y-2">
 							<li>
-								<input type="checkbox"><label for="" class="ml-2">Metallic</label></input>
+								<input type="checkbox" /><label for="" class="ml-2"
+									>Metallic</label
+								>
 							</li>
 							<li>
-								<input type="checkbox"><label for="" class="ml-2">Plastic cover</label></input>
+								<input type="checkbox" /><label for="" class="ml-2"
+									>Plastic cover</label
+								>
 							</li>
 							<li>
-								<input type="checkbox"><label for="" class="ml-2">8GB Ram</label></input>
+								<input type="checkbox" /><label for="" class="ml-2"
+									>8GB Ram</label
+								>
 							</li>
 							<li>
-								<input type="checkbox" ><label for="" class="ml-2">Super power</label></input>
+								<input type="checkbox" /><label for="" class="ml-2"
+									>Super power</label
+								>
 							</li>
 							<li>
-								<input type="checkbox" ><label for="" class="ml-2">Large Memory</label></input>
+								<input type="checkbox" /><label for="" class="ml-2"
+									>Large Memory</label
+								>
 							</li>
 							<li>
 								<a
@@ -226,12 +270,18 @@
 									<i class="fa-solid fa-caret-down"></i>
 								</button>
 								<div id="priceRange" class="hidden px-3 pb-3">
-									<p class="text-sm text-gray-600">
+									<span class="text-sm text-gray-600">
 										<div class="slidecontainer">
-											<input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-											<p>RS: <span id="demo"></span>$</p>
+											<input
+												type="range"
+												min="1"
+												max="100"
+												value="100"
+												class="slider"
+												id="myRange" />
+											<p>RS: <span id="demo"></span>K $</p>
 										</div>
-									</p>
+									</span>
 								</div>
 							</div>
 
@@ -245,9 +295,9 @@
 								</button>
 								<div id="condition" class="hidden px-3 pb-3">
 									<p class="text-sm text-gray-600">
-										<input type="checkbox" class="mx-2">Brand New
-										<br>
-										<input type="checkbox" class="mx-2">Used
+										<input type="checkbox" class="mx-2" />Brand New
+										<br />
+										<input type="checkbox" class="mx-2" />Used
 									</p>
 								</div>
 							</div>
@@ -261,27 +311,33 @@
 									<i class="fa-solid fa-caret-down"></i>
 								</button>
 								<div id="ratings" class="hidden px-3 pb-3">
-									<input type="checkbox" class="mx-2 text-sm text-gray-600">1 star</input><br>
-									<input type="checkbox" class="mx-2 text-sm text-gray-600">2 star</input><br>
-									<input type="checkbox" class="mx-2 text-sm text-gray-600">3 star</input><br>
-									<input type="checkbox" class="mx-2 text-sm text-gray-600">4 star</input><br>
-									<input type="checkbox" class="mx-2 text-sm text-gray-600">5 star</input>
+									<input type="checkbox" class="mx-2 text-sm text-gray-600" />1
+									star<br />
+									<input type="checkbox" class="mx-2 text-sm text-gray-600" />2
+									star<br />
+									<input type="checkbox" class="mx-2 text-sm text-gray-600" />3
+									star<br />
+									<input type="checkbox" class="mx-2 text-sm text-gray-600" />4
+									star<br />
+									<input type="checkbox" class="mx-2 text-sm text-gray-600" />5
+									star
 								</div>
 							</div>
-
-							
 						</div>
 					</div>
 				</div>
 
-				<!-- Items Div -->
-				<div class="xl:hidden">
+				<!-- Items Defining Div -->
+				<div class="md:hidden">
 					<div class="flex py-2 justify-between bg-white px-2">
 						<select class="border border-slate-400 rounded-md">
 							<option>
 								<span>
 									Sort: Newest
-									<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAbFBMVEX///8AAACTk5P6+vrNzc3S0tLs7Oyzs7Pn5+eXl5fDw8P29vZLS0uhoaF9fX0gICBbW1vZ2dng4OC6urqMjIyCgoLGxsYXFxcnJydjY2N3d3dnZ2caGhpSUlJGRkZBQUE6OjoPDw+np6dvb29G6LpyAAACAElEQVR4nO3diU7bQBQF0BjihJCFsDSlUEpL//8fW1ClOguKGXv8YnPOB0T3Kpl4LL2xRyMAAAAAAAAAAAAA0kxul2dDsJxeHOxXLorhWIz3C86iQ7XsbLfgXXSi1n3ZLngZnSeDzVbDr9FxMrivFhxHp8miHPQqfFX9s/kWHSaLh8E3fKw0XEWHyaJ6vZhGh8liWmk4iQ6Txbx6uXiITpPB9qbm/Fd0ntZd7exLL6IDtW6y03A0H9LNU1Gs57sF/ypX36NzteWxPNDv33ocgnfbAQAAAAAAAAB0aXI97tpNh5MT57OrkNmXp8uOCpYh9d6sOykYehzh/ni+xoIH9zr4Fn/ENixucxe8CS5YPOduGH+s69CwZJt+Rxcs3h+XbMc6umCR+6IYP8ie+ztcRhfMvg7D/0t/Zi44GkWPsWe/Hn6CPc3w96Wf4N7i9f4w5rjF0+Z4ttYM/B4fAAAAAAAAAKBjw37CZLn62IGL59neY15PWtIzaPdeInHCEkf3uhrYai75WdCr6OR1pY+yH3ihyylq8Ez2RXT2el7SG2af0G5Hk1n9fvxMm5y3mB7/+BPQ5MxM/iH0NjR5z8x1dPhamgx5R2evKf0I8F109Jo2yQ17c4+RuhL7sQrfpB2y7FHBpPcfrvqxn/nvY++wfBn3ZgkCAAAAAAAAAAAAUNsfo9wqQZAkqQoAAAAASUVORK5CYII=" alt="" class="size-7 ml-1"
+									<img
+										src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAbFBMVEX///8AAACTk5P6+vrNzc3S0tLs7Oyzs7Pn5+eXl5fDw8P29vZLS0uhoaF9fX0gICBbW1vZ2dng4OC6urqMjIyCgoLGxsYXFxcnJydjY2N3d3dnZ2caGhpSUlJGRkZBQUE6OjoPDw+np6dvb29G6LpyAAACAElEQVR4nO3diU7bQBQF0BjihJCFsDSlUEpL//8fW1ClOguKGXv8YnPOB0T3Kpl4LL2xRyMAAAAAAAAAAAAA0kxul2dDsJxeHOxXLorhWIz3C86iQ7XsbLfgXXSi1n3ZLngZnSeDzVbDr9FxMrivFhxHp8miHPQqfFX9s/kWHSaLh8E3fKw0XEWHyaJ6vZhGh8liWmk4iQ6Txbx6uXiITpPB9qbm/Fd0ntZd7exLL6IDtW6y03A0H9LNU1Gs57sF/ypX36NzteWxPNDv33ocgnfbAQAAAAAAAAB0aXI97tpNh5MT57OrkNmXp8uOCpYh9d6sOykYehzh/ni+xoIH9zr4Fn/ENixucxe8CS5YPOduGH+s69CwZJt+Rxcs3h+XbMc6umCR+6IYP8ie+ztcRhfMvg7D/0t/Zi44GkWPsWe/Hn6CPc3w96Wf4N7i9f4w5rjF0+Z4ttYM/B4fAAAAAAAAAKBjw37CZLn62IGL59neY15PWtIzaPdeInHCEkf3uhrYai75WdCr6OR1pY+yH3ihyylq8Ez2RXT2el7SG2af0G5Hk1n9fvxMm5y3mB7/+BPQ5MxM/iH0NjR5z8x1dPhamgx5R2evKf0I8F109Jo2yQ17c4+RuhL7sQrfpB2y7FHBpPcfrvqxn/nvY++wfBn3ZgkCAAAAAAAAAAAAUNsfo9wqQZAkqQoAAAAASUVORK5CYII="
+										alt=""
+										class="size-7 ml-1"
 								/></span>
 							</option>
 							<option>Oldest</option>
@@ -290,9 +346,12 @@
 							>Filters(3)
 							<i class="fa-solid fa-filter size-7 ml-1 py-1 text-slate-400"></i
 						></span>
-						<img src="data:image/jpeg;base64,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" alt="" class="size-7 bg-white" />
+						<img
+							src="data:image/jpeg;base64,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"
+							alt=""
+							class="size-7 bg-white" />
 					</div>
-					<div class="mt-2">
+					<!-- <div class="mt-2">
 						<span
 							class="font-sans px-2 bg-white py-2 border border-blue-600 rounded-md"
 							>Huawie
@@ -308,38 +367,49 @@
 							>64 GB
 							<i class="fa-solid fa-xmark text-slate-400 text-lg ml-2"></i
 						></span>
-					</div>
+					</div> -->
 				</div>
-
 			</div>
 
 			<!-- Items Div -->
-			<div class="mt-4 xl:col-span-3 w-full ">
-				<div class="hidden xl:flex justify-between w-full bg-white py-2 rounded-md px-2">
+			<div class="mt-4 xl:col-span-3 w-full">
+				<div
+					class="hidden xl:flex justify-between w-full bg-white py-2 rounded-md px-2">
 					<div>
-						<span>12,911 items in <span class="font-bold">Mobile accessory</span></span>
+						<span
+							>12,911 items in
+							<span class="font-bold">Mobile accessory</span></span
+						>
 					</div>
-					<div class="flex gap-3 ">
-						<input type="checkbox"><label>Verified Only</label></input>
+					<div class="flex gap-3">
+						<input type="checkbox" /><label>Verified Only</label>
 						<select>
 							<option>Featured</option>
 							<option>latest</option>
 							<option>oldest</option>
 							<option>recommeded</option>
 						</select>
-						<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAOVBMVEX///8AAABDQ0NLS0vr6+vj4+NXV1dfX1/S0tKsrKxkZGSysrJdXV3Z2dnLy8umpqavr69sbGxvb2+4fpZ8AAABd0lEQVR4nO3cy3KCQBBAUfHBQzFi/v9jk43RDUJb0xShzlnbVXNx4QhT7HYAAAAAAAAAAAAbc6v3c9Xd62AXGLzld/RVxPk52IQG++yOW2g5VXV5DA7Bwe7dKgqog+tpHoOxb7Kq6uSQfXA9h8fgITi4FyLkf4dcj++1YyHtxOB14ZDjxOdOYyGnicGjkBghQpIIEZJEiJAkQoQkESIkiRAhSYQISSJESBIhQpIIWWtIe3rvayzka2KwXThkrtU/sRIipLCPTz7EjqLkn3zoguv5O4tyCQ4OySG7c2g538/Be2jwnt3xe2mbw1zNpcggAKzQ0Of/IPbpG5To5u9lpxHbopzHV1DGYpvG1R5gXts2fjN/rIQISQ7ZzA26zdwyFSKkMCFCkggRkkSIkCRChCQRIiSJECFJhAhJIkRIEiFCkmzuBS9zrf6JlRAhhW3m1W2beZle8Mq+nA6KnXxuxldQSuS9kcOng+nfBwAAAAAAAAAAwNJ+APOJJGMj2BHUAAAAAElFTkSuQmCC" alt="" class="size-7 bg-white" />
+						<img
+							src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAOVBMVEX///8AAABDQ0NLS0vr6+vj4+NXV1dfX1/S0tKsrKxkZGSysrJdXV3Z2dnLy8umpqavr69sbGxvb2+4fpZ8AAABd0lEQVR4nO3cy3KCQBBAUfHBQzFi/v9jk43RDUJb0xShzlnbVXNx4QhT7HYAAAAAAAAAAAAbc6v3c9Xd62AXGLzld/RVxPk52IQG++yOW2g5VXV5DA7Bwe7dKgqog+tpHoOxb7Kq6uSQfXA9h8fgITi4FyLkf4dcj++1YyHtxOB14ZDjxOdOYyGnicGjkBghQpIIEZJEiJAkQoQkESIkiRAhSYQISSJESBIhQpIIWWtIe3rvayzka2KwXThkrtU/sRIipLCPTz7EjqLkn3zoguv5O4tyCQ4OySG7c2g538/Be2jwnt3xe2mbw1zNpcggAKzQ0Of/IPbpG5To5u9lpxHbopzHV1DGYpvG1R5gXts2fjN/rIQISQ7ZzA26zdwyFSKkMCFCkggRkkSIkCRChCQRIiSJECFJhAhJIkRIEiFCkmzuBS9zrf6JlRAhhW3m1W2beZle8Mq+nA6KnXxuxldQSuS9kcOng+nfBwAAAAAAAAAAwNJ+APOJJGMj2BHUAAAAAElFTkSuQmCC"
+							alt=""
+							class="size-7 bg-white" />
 					</div>
 				</div>
-				<a href="product_description_page.html"><div id="item-container"
-					class="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-3 xl:grid-cols-3 xl:gap-5 xl:mt-4 ">
-				</div></a>
-				<div class=" mt-4 xl:flex justify-end items-end">
-					<button id="prev-button" class="px-4 py-2" disabled><i class="fa-solid fa-less-than"></i></button>
-					<span id="pagination-info" class="px-4 py-2 "></span>
-					<button id="next-button" class="px-4 py-2"><i class="fa-solid fa-greater-than"></i></button>
+				<a href="product_description_page.html"
+					><div
+						id="item-container"
+						class="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-3 xl:grid-cols-3 xl:gap-5 xl:mt-4"></div
+				></a>
+				<div class="mt-4 xl:flex justify-end items-end">
+					<button id="prev-button" class="px-4 py-2" disabled>
+						<i class="fa-solid fa-less-than"></i>
+					</button>
+					<span id="pagination-info" class="px-4 py-2"></span>
+					<button id="next-button" class="px-4 py-2">
+						<i class="fa-solid fa-greater-than"></i>
+					</button>
 				</div>
 			</div>
-			
 		</div>
 
 		<!-- You may also like Div -->
@@ -550,6 +620,4 @@
 			</div>
 		</footer>
 	</body>
-
-	
 </html>

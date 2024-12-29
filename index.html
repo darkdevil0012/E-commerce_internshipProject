@@ -8,14 +8,54 @@
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+		<link rel="stylesheet" href="index.css" />
+		<script src="index.js" type="module" defer></script>
 	</head>
 
-	<body class="px-10 py-5 bg-slate-100">
+	<body class="px-4 py-5 bg-slate-100">
+		<!-- moblie responsive side nav -->
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" id="closenav_btn">&times</a>
+			<a href="#"
+				><span class="mr-2">Sign in</span>|<span class="ml-2">Register</span></a
+			>
+			<a href="index.html"><i class="fa-solid fa-house mr-2"></i>Home</a>
+			<a
+				><i class="fa-solid fa-list mr-2"></i
+				><button onclick="toggleDropdown('priceRange')">Categories</button></a
+			>
+			<div>
+				<div id="priceRange" class="hidden px-3 pb-3">
+					<span class="text-sm text-gray-600">
+						<div class="slidecontainer">
+							<a href="product_listing_page.html">ladies accessories</a>
+							<a href="product_listing_page.html">men's clothing</a>
+							<a href="product_listing_page.html">men's accessories</a>
+							<a href="product_listing_page.html">electonics accessories</a>
+						</div>
+					</span>
+				</div>
+			</div>
+			<a href="cart.html"
+				><i class="fa-solid fa-cart-shopping mr-2 pb-4"></i>Cart</a
+			>
+			<div class="py-4 border-t border-gray-400">
+				<a href="#"><i class="fa-solid fa-globe mr-2"></i>English | USD</a>
+				<a href="#"><i class="fa-solid fa-headphones mr-2"></i>Contact us</a>
+				<a href="#"><i class="fa-regular fa-building mr-2"></i>About</a>
+			</div>
+			<div class="py-4 border-t border-gray-400">
+				<a href="#">User agreement</a>
+				<a href="#">Partnership</a>
+				<a href="#">Privacy policy</a>
+			</div>
+		</div>
+
 		<!-- Navbar section  -->
 		<nav class="bg-white pb-3 px-3">
 			<div class="flex justify-between">
 				<div class="flex mt-4">
-					<i class="fa-solid fa-bars fa-lg mt-3 xl:hidden"></i>
+					<i class="fa-solid fa-bars fa-lg mt-3 xl:hidden" id="opennav_btn"></i>
 					<a href="index.html"
 						><img
 							src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732049107/mjtj07ngvughbpiu38hd.png"
@@ -33,10 +73,13 @@
 					class="hidden xl:flex border-blue-500 border-2 rounded-md text-center h-full mt-4">
 					<input type="text" placeholder="Search" class="px-2 w-96 py-1" />
 					<select class="border-blue-400 border-l-2">
-						<option>All category</option>
-						<option>Electronics</option>
-						<option>Toys</option>
-						<option>Women's clothing</option>
+						<option value="all">All category</option>
+						<option value="ladies accessories">ladies accessories</option>
+						<option value="men's clothing">men's clothing</option>
+						<option value="men's accessories">men's accessories</option>
+						<option value="electonics accessories">
+							electonics accessories
+						</option>
 					</select>
 					<button class="text-center bg-blue-600 px-4 rounded-sm text-white">
 						Search
@@ -44,22 +87,30 @@
 				</div>
 
 				<div class="flex gap-2 mt-4">
-					<div class="text-center">
-						<i class="fa-solid fa-cart-shopping fa-lg xl:text-gray-400"></i>
-						<h1 class="xl:text-gray-400">My cart</h1>
-					</div>
-					<div class="text-center">
-						<i class="fa-solid fa-user fa-lg xl:text-gray-400"></i>
-						<h1 class="xl:text-gray-400">profile</h1>
-					</div>
-					<div class="text-center hidden md:block xl:block">
-						<i class="fa-solid fa-message fa-lg xl:text-gray-400"></i>
-						<h1 class="xl:text-gray-400">Message</h1>
-					</div>
-					<div class="text-center hidden md:block xl:block">
-						<i class="fa-solid fa-heart fa-lg xl:text-gray-400"></i>
-						<h1 class="xl:text-gray-400">Orders</h1>
-					</div>
+					<a href="cart.html"
+						><div class="text-center">
+							<i class="fa-solid fa-cart-shopping fa-lg xl:text-gray-400"></i>
+							<h1 class="xl:text-gray-400">My cart</h1>
+						</div></a
+					>
+					<a href="signin.html"
+						><div class="text-center">
+							<i class="fa-solid fa-user fa-lg xl:text-gray-400"></i>
+							<h1 class="xl:text-gray-400">profile</h1>
+						</div></a
+					>
+					<a href="product_listing_page.html">
+						<div class="text-center hidden md:block xl:block">
+							<i class="fa-solid fa-box fa-lg xl:text-gray-400"></i>
+							<h1 class="xl:text-gray-400">products</h1>
+						</div></a
+					>
+					<a href="cart.html">
+						<div class="text-center hidden md:block xl:block">
+							<i class="fa-solid fa-heart fa-lg xl:text-gray-400"></i>
+							<h1 class="xl:text-gray-400">Orders</h1>
+						</div></a
+					>
 				</div>
 			</div>
 			<div class="xl:hidden">
@@ -67,12 +118,6 @@
 					type="text"
 					placeholder="Search"
 					class="border-gray-400 border-2 my-5 size-full py-1 px-1" />
-				<select class="hidden">
-					<option>All category</option>
-					<option>Electronics</option>
-					<option>Toys</option>
-					<option>Women's clothing</option>
-				</select>
 			</div>
 		</nav>
 
@@ -82,32 +127,29 @@
 			<div class="">
 				<i class="hidden fa-solid fa-bars fa-lg mt-3 xl:inline-block"></i>
 				<a
+					href="product_listing_page.html"
 					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
-					>All category</a
+					>All products</a
 				>
 				<a
+					href=""
 					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
-					>Gadgets</a
+					>ladies accessories</a
 				>
 				<a
+					href=""
 					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
-					>Clothes</a
+					>men's clothing</a
 				>
 				<a
+					href=""
 					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
-					>Hot offers</a
+					>men's accessories</a
 				>
 				<a
+					href=""
 					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
-					>Gift boxes</a
-				>
-				<a
-					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
-					>Projects</a
-				>
-				<a
-					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
-					>Menu item</a
+					>electonics accessories</a
 				>
 			</div>
 			<div class="xl:flex gap-3 hidden text-sm">
@@ -129,33 +171,32 @@
 		<!-- Banner section  -->
 		<div class="flex mt-2 gap-6 xl:w-full bg-white px-3">
 			<div class="py-5 w-1/4 hidden md:block xl:block">
-				<h1 class="hover:bg-blue-300 py-2 px-2 rounded-lg font-serif">
-					Automobiles
-				</h1>
-				<h1 class="hover:bg-blue-300 py-2 px-2 rounded-lg font-serif">
-					Clothes and wear
-				</h1>
-				<h1 class="hover:bg-blue-300 py-2 px-2 rounded-lg font-serif">
-					Home interiors
-				</h1>
-				<h1 class="hover:bg-blue-300 py-2 px-2 rounded-lg font-serif">
-					Computer and tech
-				</h1>
-				<h1
-					class="hover:bg-blue-300 py-2 px-2 rounded-lg font-serif md:hidden xl:block">
-					Tools equipments
-				</h1>
-				<h1
-					class="hover:bg-blue-300 py-2 px-2 rounded-lg font-serif md:hidden xl:block">
-					Sports and outdoor
-				</h1>
-				<h1
-					class="hover:bg-blue-300 py-2 px-2 rounded-lg font-serif md:hidden xl:block">
-					Animal and pets
-				</h1>
-				<h1 class="hover:bg-blue-300 py-2 px-2 rounded-lg font-serif">
-					More category
-				</h1>
+				<a href="product_listing_page.html"
+					><h1 class="hover:bg-blue-300 py-2 px-2 rounded-lg font-serif">
+						All products
+					</h1></a
+				>
+				<a href="product_listing_page.html"
+					><h1 class="hover:bg-blue-300 py-2 px-2 rounded-lg font-serif">
+						ladies accessories
+					</h1></a
+				>
+				<a href="product_listing_page.html"
+					><h1 class="hover:bg-blue-300 py-2 px-2 rounded-lg font-serif">
+						men's clothing
+					</h1></a
+				>
+				<a href="product_listing_page.html"
+					><h1 class="hover:bg-blue-300 py-2 px-2 rounded-lg font-serif">
+						men's accessories
+					</h1></a
+				>
+				<a href="product_listing_page.html"
+					><h1
+						class="hover:bg-blue-300 py-2 px-2 rounded-lg font-serif md:hidden xl:block">
+						electonics accessories
+					</h1></a
+				>
 			</div>
 			<div class="py-5 relative md:w-full xl:w-full">
 				<img
@@ -183,13 +224,17 @@
 						let's get started
 					</span>
 					<br />
-					<button class="bg-blue-500 text-white w-full px-4 mt-2">
-						Join now
-					</button>
+					<a href="signup.html"
+						><button class="bg-blue-500 text-white w-full px-4 mt-2">
+							Join now
+						</button></a
+					>
 					<br />
-					<button class="text-blue-500 w-full px-4 mt-2 bg-white">
-						Login in
-					</button>
+					<a href="signin.html"
+						><button class="text-blue-500 w-full px-4 mt-2 bg-white">
+							Login in
+						</button></a
+					>
 				</div>
 				<div
 					class="block w-full bg-orange-400 text-white rounded-lg mt-3 py-4 px-2">

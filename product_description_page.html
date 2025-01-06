@@ -12,12 +12,14 @@
 		<link rel="stylesheet" href="product_description.css" />
 		<script src="product_description.js" type="module" defer></script>
 	</head>
-	<body class="w-full py-2 bg-slate-100 size-full">
+	<body class="w-full px-2 py-2 bg-slate-100 size-full">
 		<!-- Navbar section  -->
 		<nav class="bg-white pb-2 md:pb-3 px-3">
 			<div class="flex justify-between">
 				<div class="flex mt-4">
-					<i class="fa-solid fa-arrow-left fa-lg mt-3 md:hidden"></i>
+					<i
+						class="fa-solid fa-arrow-left fa-lg mt-3 md:hidden"
+						onclick="window.history.length > 1 ? window.history.back() : window.location.href = '/'"></i>
 					<a href="index.html"
 						><img
 							src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732049107/mjtj07ngvughbpiu38hd.png"
@@ -29,26 +31,6 @@
 						class="hidden md:block text-blue-500 font-serif font-bold text-xl">
 						Brand
 					</a>
-				</div>
-
-				<div
-					class="hidden xl:flex border-blue-500 border-2 rounded-md text-center h-full mt-4">
-					<input
-						type="text"
-						placeholder="Search"
-						id="searchproducts"
-						class="px-2 w-96 py-1" />
-					<select class="border-blue-400 border-l-2">
-						<option>All category</option>
-						<option>Electronics</option>
-						<option>Toys</option>
-						<option>Women's clothing</option>
-					</select>
-					<button
-						class="text-center bg-blue-600 px-4 rounded-sm text-white"
-						id="searchbtn">
-						Search
-					</button>
 				</div>
 
 				<div class="flex gap-2 mt-4">
@@ -182,18 +164,20 @@
 					</div>
 				</div>
 				<div class="flex justify-between mt-4 text-xl xl:block xl:px-20">
-					<h1 class="xl:mt-2 flex">
+					<h1 class="xl:mt-2 country_img_heading_fix">
 						<img
 							src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASIAAACuCAMAAAClZfCTAAAAIVBMVEX+zgABAQHcAAACBAAAAQUGAgDLCA3VAAX/xBT90AHfAAEctey5AAABQUlEQVR4nO3bwWrCQBRA0Vedqu3/f3C1BhFtud3VxTlDwjBkwnDJNvNGmP8+wOuTKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSpVnn27qMdZ7drm1cZtviNnla+F5bv+1fd4///MLr/seFVzrQ7AmzCPNOmANhPgmzI0iUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSREmiJFGSKEmUJEoSJYmSP6yTryjNkTAnwnwQBgAAAAAAAAAAAAAAAAAAAPizL82iAJZt4rYoAAAAAElFTkSuQmCC"
 							alt=""
 							class="size-10 h-7 mr-2" />Germany
 					</h1>
-					<h1 class="xl:mt-3">
-						<i class="fa-solid fa-check mr-2"></i>Verified
-					</h1>
-					<h1 class="xl:mt-3">
-						<i class="fa-solid fa-globe mr-2"></i>Shipping
-					</h1>
+					<div class="xl:mt-3 country_img_heading_fix">
+						<i class="fa-solid fa-check mr-2 pt-2"></i>
+						<h2>Verified</h2>
+					</div>
+					<div class="xl:mt-3 country_img_heading_fix">
+						<i class="fa-solid fa-globe mr-2 pt-2"></i>
+						<h2>Shipping</h2>
+					</div>
 					<div class="flex gap-2">
 						<button
 							class="hidden xl:w-full xl:block mt-10 bg-blue-500 py-2 px-2 rounded-lg text-white"

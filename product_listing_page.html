@@ -11,13 +11,17 @@
 		<link rel="stylesheet" href="product_listing_page.css" />
 		<script src="https://cdn.tailwindcss.com"></script>
 	</head>
-	<body class="px-10 py-5 bg-slate-100">
+	<body class="px-4 py-5 bg-slate-100">
 		<!-- Navbar section  -->
 		<nav class="bg-white pb-0 md:pb-3 px-3">
 			<div class="flex justify-between">
 				<div class="flex mt-4">
-					<i class="fa-solid fa-arrow-left fa-lg mt-3 md:hidden"></i>
-					<h1 class="font-sans text-base px-1 md:hidden">Mobile accessory</h1>
+					<i
+						class="fa-solid fa-arrow-left fa-lg mt-3 md:hidden"
+						onclick="window.history.length > 1 ? window.history.back() : window.location.href = '/'"></i>
+					<h1
+						class="font-sans text-base px-1 md:hidden"
+						id="mobile_nav_heading"></h1>
 					<a href="index.html"
 						><img
 							src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732049107/mjtj07ngvughbpiu38hd.png"
@@ -99,31 +103,36 @@
 			<div class="">
 				<i class="hidden fa-solid fa-bars fa-lg mt-3 xl:inline-block"></i>
 
-				<a
-					href="product_listing_page.html"
-					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
-					>All category</a
-				>
-				<a
-					href="product_listing_page.html"
-					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
-					>ladies accessories</a
-				>
-				<a
-					href="product_listing_page.html"
-					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
-					>men's clothing</a
-				>
-				<a
-					href="product_listing_page.html"
-					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
-					>men's accessories</a
-				>
-				<a
-					href="product_listing_page.html"
-					class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
-					>electonics accessories</a
-				>
+				<button id="mobile_category_search_all">
+					<a
+						class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
+						>All category</a
+					>
+				</button>
+				<button id="mobile_category_search_ladiesaccessories">
+					<a
+						class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
+						>ladies accessories</a
+					>
+				</button>
+				<button id="mobile_category_search_menclothing">
+					<a
+						class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
+						>men's clothing</a
+					>
+				</button>
+				<button id="mobile_category_search_menaccessories">
+					<a
+						class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
+						>men's accessories</a
+					>
+				</button>
+				<button id="mobile_category_search_electronicaccessories">
+					<a
+						class="bg-slate-200 text-blue-500 py-2 px-2 rounded-md w-30 inline-block md:text-black md:bg-white"
+						>electonics accessories</a
+					>
+				</button>
 			</div>
 			<div class="xl:flex gap-3 hidden text-sm">
 				<select>
@@ -157,31 +166,40 @@
 						</h3>
 						<ul class="space-y-2">
 							<li>
-								<a href="#" class="hover:text-blue-800 text-sm"
+								<a
+									id="web_category_search_ladiesaccessories"
+									class="hover:text-blue-800 text-sm cursor-pointer"
 									>ladies accessories</a
 								>
 							</li>
 							<li>
-								<a href="#" class="hover:text-blue-800 text-sm"
+								<a
+									id="web_category_search_menclothing"
+									class="hover:text-blue-800 text-sm cursor-pointer"
 									>men's clothing</a
 								>
 							</li>
 							<li>
-								<a href="#" class="hover:text-blue-800 text-sm"
+								<a
+									id="web_category_search_menaccessories"
+									class="hover:text-blue-800 text-sm cursor-pointer"
 									>men's accessories</a
 								>
 							</li>
 							<li>
-								<a href="#" class="hover:text-blue-800 text-sm"
+								<a
+									id="web_category_search_electronicaccessories"
+									class="hover:text-blue-800 text-sm cursor-pointer"
 									>electonics accessories</a
 								>
 							</li>
 							<li>
-								<a
-									href="#"
-									class="font-medium text-blue-600 hover:text-gray-900 text-sm"
-									>See all</a
-								>
+								<button onclick="alert('no more category avaliable')">
+									<a
+										class="font-medium text-blue-600 hover:text-gray-900 text-sm"
+										>See all</a
+									>
+								</button>
 							</li>
 						</ul>
 
@@ -295,9 +313,15 @@
 								</button>
 								<div id="condition" class="hidden px-3 pb-3">
 									<p class="text-sm text-gray-600">
-										<input type="checkbox" class="mx-2" />Brand New
+										<input
+											type="checkbox"
+											class="mx-2"
+											id="condition_checkbox_new" />Brand New
 										<br />
-										<input type="checkbox" class="mx-2" />Used
+										<input
+											type="checkbox"
+											class="mx-2"
+											id="condition_checkbox_used" />Used
 									</p>
 								</div>
 							</div>
@@ -311,16 +335,26 @@
 									<i class="fa-solid fa-caret-down"></i>
 								</button>
 								<div id="ratings" class="hidden px-3 pb-3">
-									<input type="checkbox" class="mx-2 text-sm text-gray-600" />1
-									star<br />
-									<input type="checkbox" class="mx-2 text-sm text-gray-600" />2
-									star<br />
-									<input type="checkbox" class="mx-2 text-sm text-gray-600" />3
-									star<br />
-									<input type="checkbox" class="mx-2 text-sm text-gray-600" />4
-									star<br />
-									<input type="checkbox" class="mx-2 text-sm text-gray-600" />5
-									star
+									<input
+										type="checkbox"
+										class="mx-2 text-sm text-gray-600"
+										id="rating_1" />1 star<br />
+									<input
+										type="checkbox"
+										class="mx-2 text-sm text-gray-600"
+										id="rating_2" />2 star<br />
+									<input
+										type="checkbox"
+										class="mx-2 text-sm text-gray-600"
+										id="rating_3" />3 star<br />
+									<input
+										type="checkbox"
+										class="mx-2 text-sm text-gray-600"
+										id="rating_4" />4 star<br />
+									<input
+										type="checkbox"
+										class="mx-2 text-sm text-gray-600"
+										id="rating_5" />5 star
 								</div>
 							</div>
 						</div>
@@ -343,7 +377,7 @@
 							<option>Oldest</option>
 						</select>
 						<span class="flex text-lg font-sans bg-white px-5"
-							>Filters(3)
+							>Filters
 							<i class="fa-solid fa-filter size-7 ml-1 py-1 text-slate-400"></i
 						></span>
 						<img
@@ -376,10 +410,8 @@
 				<div
 					class="hidden xl:flex justify-between w-full bg-white py-2 rounded-md px-2">
 					<div>
-						<span
-							>12,911 items in
-							<span class="font-bold">Mobile accessory</span></span
-						>
+						<span id="web_category_itemsno_shower"></span>
+						<span class="font-bold" id="web_category_shower"></span>
 					</div>
 					<div class="flex gap-3">
 						<input type="checkbox" /><label>Verified Only</label>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Checkout Page</title>
+		<script src="checkout.js" type="module" defer></script>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link rel="stylesheet" href="checkout.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+	</head>
+	<body class="py-2 px-4">
+		<!-- Navbar section  -->
+		<nav class="bg-white pb-0 md:pb-3 px-3">
+			<div class="flex justify-between">
+				<div class="flex mt-4">
+					<i
+						class="fa-solid fa-arrow-left fa-lg mt-3 md:hidden"
+						onclick="window.history.length > 1 ? window.history.back() : window.location.href = '/'"></i>
+					<h1 class="font-sans text-base px-1 md:hidden">Checkout Page</h1>
+					<a href="index.html"
+						><img
+							src="https://res.cloudinary.com/dnqplq5hb/image/upload/v1732049107/mjtj07ngvughbpiu38hd.png"
+							alt=""
+							class="hidden md:block xl:block h-7 bg-blue-500 mx-2 py-1 px-1 rounded-md shadow-md shadow-blue-400"
+					/></a>
+					<a href="index.html"
+						><h1
+							class="hidden md:block xl:block text-blue-500 font-serif font-bold text-xl">
+							Brand
+						</h1></a
+					>
+				</div>
+
+				<div class="flex gap-2 mt-4">
+					<a href="cart.html" class="md:hidden xl:block">
+						<div class="text-center">
+							<i class="fa-solid fa-cart-shopping fa-lg xl:text-gray-400"></i>
+							<h1 class="hidden xl:block xl:text-gray-400">My cart</h1>
+						</div></a
+					>
+					<a href="signin.html" class="md:hidden xl:block">
+						<div class="text-center">
+							<i class="fa-solid fa-user fa-lg xl:text-gray-400"></i>
+							<h1 class="hidden xl:block xl:text-gray-400">profile</h1>
+						</div></a
+					>
+					<a href="product_listing_page.html">
+						<div class="text-center hidden md:block xl:block">
+							<i class="fa-solid fa-box fa-lg xl:text-gray-400"></i>
+							<h1 class="xl:text-gray-400">Products</h1>
+						</div></a
+					>
+					<a href="cart.html">
+						<div class="text-center hidden md:block xl:block">
+							<i class="fa-solid fa-heart fa-lg xl:text-gray-400"></i>
+							<h1 class="xl:text-gray-400">Orders</h1>
+						</div></a
+					>
+				</div>
+			</div>
+		</nav>
+
+		<!-- delivery information form -->
+		<div class="main mt-4 xl:flex">
+			<div class="px-4 input_form">
+				<form action="" class="flex flex-col gap-4">
+					<h1 class="text-xl font-semibold">Delivery address</h1>
+					<input
+						type="text"
+						name=""
+						id=""
+						placeholder="First Name"
+						class="py-2 px-2 border border-gray-400" />
+					<input
+						type="text"
+						name=""
+						id=""
+						placeholder="Last Name"
+						class="py-2 px-2 border border-gray-400" />
+					<input
+						type="number"
+						name=""
+						id=""
+						placeholder="Mobile No"
+						class="py-2 px-2 border border-gray-400" />
+					<input
+						type="email"
+						name=""
+						id=""
+						placeholder="Email"
+						class="py-2 px-2 border border-gray-400" />
+					<input
+						type="text"
+						name=""
+						id=""
+						placeholder="Complete Address"
+						class="py-2 px-2 border border-gray-400" />
+					<input
+						type="text"
+						name=""
+						id=""
+						placeholder="Country"
+						class="py-2 px-2 border border-gray-400" />
+					<input
+						type="text"
+						name=""
+						id=""
+						placeholder="City"
+						class="py-2 px-2 border border-gray-400" />
+				</form>
+				<div class="mt-4 w-full">
+					<h1 class="font-semibold text-xl">PAYMENT TYPE</h1>
+					<div class="mt-2">
+						<div class="flex border border-gray-400 px-3 py-2">
+							<i class="fa-solid fa-coins mr-3 py-2"></i>
+							<div class="flex justify-between w-full">
+								<label for="" class="text-lg">Cash on delivery</label
+								><input type="radio" value="cash" name="payment" />
+							</div>
+						</div>
+						<div class="flex border border-gray-400 px-3 py-2 mt-4">
+							<i class="fa-solid fa-credit-card mr-3 py-2"></i>
+							<div class="flex justify-between w-full">
+								<label for="" class="text-lg">Credit/Debit Card</label
+								><input type="radio" value="card" name="payment" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<button
+					class="w-full text-center py-2 px-2 mt-4 bg-blue-500 rounded-lg text-white text-xl hidden xl:block"
+					id="placeorder">
+					Place order
+				</button>
+			</div>
+			<div id="web_cart_items" class="py-10 px-5"></div>
+			<button
+				class="w-full text-center py-2 px-2 mt-4 bg-blue-500 rounded-lg text-white text-xl xl:hidden"
+				id="placeorder_mobile">
+				Place order
+			</button>
+		</div>
+	</body>
+</html>

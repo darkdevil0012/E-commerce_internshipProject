@@ -14,17 +14,10 @@ let currentIndex = 0;
 let cart = [];
 let saveforlater = [];
 
-window.onload = () => {
-	const storedCart = localStorage.getItem("cart");
-	if (storedCart) {
-		cart = JSON.parse(storedCart); // Parse the JSON string into an array
-		console.log("Cart loaded:", cart);
-	}
-};
-
 // Save cart to localStorage
 const saveCartToStorage = () => {
 	localStorage.setItem("cart", JSON.stringify(cart)); // Convert the array to a JSON string
+	console.log(cart);
 };
 
 //add to cart function
@@ -32,7 +25,7 @@ const addToCart = (product_id) => {
 	let positionThisProductInCart = cart.findIndex(
 		(value) => value.product_id == product_id
 	);
-	if (cart.length <= 0) {
+	if (cart.length == 0) {
 		cart = [
 			{
 				product_id: product_id,
@@ -49,7 +42,6 @@ const addToCart = (product_id) => {
 			cart[positionThisProductInCart].quantity + 1;
 	}
 	saveCartToStorage(); // Save the updated cart
-	console.log(cart);
 };
 
 // Load save for later from localStorage when the page loads
@@ -57,6 +49,11 @@ window.onload = () => {
 	const storedSaveForLater = localStorage.getItem("saveforlater");
 	if (storedSaveForLater) {
 		saveforlater = JSON.parse(storedSaveForLater); // Parse the JSON string into an array
+	}
+
+	const storedCart = localStorage.getItem("cart");
+	if (storedCart) {
+		cart = JSON.parse(storedCart); // Parse the JSON string into an array
 	}
 };
 
@@ -104,7 +101,7 @@ function displayProductDetails(product) {
 		const image = document.createElement("img");
 		image.src = imageArray[i]; // Use the current image URL
 		image.className =
-			"xl:w-full object-cover flex-shrink-0 mt-2 customcss md:w-full md:h-full";
+			"w-full h-auto flex-shrink-0 mt-2 customcss md:w-full md:h-full";
 		carousel.appendChild(image); // Append the image to the carousel
 	}
 

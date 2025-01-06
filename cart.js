@@ -21,7 +21,6 @@ const saveCartToStorage = () => {
 //moving cart items if present form local storage to cart_items array
 if (storedCart) {
 	cart_items = JSON.parse(storedCart); // Parse the JSON string into an array
-	console.log("Cart loaded:", cart_items);
 }
 
 //saving saveforlater items to local storage
@@ -167,6 +166,9 @@ function displayCartItems() {
 		overall_total_cost.innerText = (total_price + 10.0 + 7.0).toFixed(2);
 	}
 	checkout_btn.innerText = "Checkout (" + cart_items.length + " items)";
+	checkout_btn.onclick = () => {
+		window.location.href = "checkout.html";
+	};
 	my_cart_heading.innerText = "My cart (" + cart_items.length + ")";
 }
 

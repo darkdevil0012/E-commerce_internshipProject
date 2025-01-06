@@ -207,7 +207,7 @@ export const items = [
 		description:
 			"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
 		category: "ladies accessories",
-		condition: "New",
+		condition: "used",
 		matterial: "leather",
 		image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
 		images: {
@@ -227,7 +227,7 @@ export const items = [
 		description:
 			"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
 		category: "men's clothing",
-		condition: "New",
+		condition: "used",
 		matterial: "cotton",
 		image:
 			"https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
@@ -248,7 +248,7 @@ export const items = [
 		description:
 			"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
 		category: "men's clothing",
-		condition: "New",
+		condition: "used",
 		matterial: "leather",
 		image: "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
 		images: {
@@ -268,7 +268,7 @@ export const items = [
 		description:
 			"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
 		category: "men's clothing",
-		condition: "New",
+		condition: "used",
 		matterial: "jersey",
 		image: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
 		images: {
@@ -368,7 +368,7 @@ export const items = [
 		description:
 			"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
 		category: "electonics accessories",
-		condition: "New",
+		condition: "used",
 		matterial: "plastic",
 		image: "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
 		images: {
@@ -388,7 +388,7 @@ export const items = [
 		description:
 			"Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
 		category: "electonics accessories",
-		condition: "New",
+		condition: "used",
 		matterial: "aluminum",
 		image: "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
 		images: {

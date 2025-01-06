@@ -1,5 +1,53 @@
 const opennav_btn = document.getElementById("opennav_btn");
 const closenav_btn = document.getElementById("closenav_btn");
+const mobile_sidebar_signup = document.getElementById("mobile_sidebar_signup");
+const mobile_sidebar_signin = document.getElementById("mobile_sidebar_signin");
+
+mobile_sidebar_signin.onclick = () => {
+	window.location.href = "signin.html";
+};
+
+mobile_sidebar_signup.onclick = () => {
+	window.location.href = "signup.html";
+};
+
+const mobile_sidebar_ladies_accessories_category = document.getElementById(
+	"mobile_sidebar_ladies_accessories_category"
+);
+const mobile_sidebar_mens_clothing_category = document.getElementById(
+	"mobile_sidebar_mens_clothing_category"
+);
+const mobile_sidebar_mens_accessories_category = document.getElementById(
+	"mobile_sidebar_mens_accessories_category"
+);
+const mobile_sidebar_electonics_accessories_category = document.getElementById(
+	"mobile_sidebar_electonics_accessories_category"
+);
+
+mobile_sidebar_ladies_accessories_category.onclick = () => {
+	window.location.href = `product_listing_page.html?query=${encodeURIComponent(
+		"ladies accessories"
+	)}`;
+};
+
+mobile_sidebar_mens_clothing_category.onclick = () => {
+	window.location.href = `product_listing_page.html?query=${encodeURIComponent(
+		"men's clothing"
+	)}`;
+};
+
+mobile_sidebar_mens_accessories_category.onclick = () => {
+	window.location.href = `product_listing_page.html?query=${encodeURIComponent(
+		"men's accessories"
+	)}`;
+};
+
+mobile_sidebar_electonics_accessories_category.onclick = () => {
+	window.location.href = `product_listing_page.html?query=${encodeURIComponent(
+		"electonics accessories"
+	)}`;
+};
+
 const homePage_web_categorySelector = document.getElementById(
 	"homePage_web_categorySelector"
 );

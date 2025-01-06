@@ -16,9 +16,16 @@
 		<!-- moblie responsive side nav -->
 		<div id="mySidenav" class="sidenav">
 			<a href="javascript:void(0)" class="closebtn" id="closenav_btn">&times</a>
-			<a href="#"
-				><span class="mr-2">Sign in</span>|<span class="ml-2">Register</span></a
-			>
+			<div class="flex">
+				<span
+					href="signin.html"
+					class="ml-10 text-2xl mr-2"
+					id="mobile_sidebar_signin"
+					>Sign in</span
+				><span href="signup.html" class="text-2xl" id="mobile_sidebar_signup"
+					>| Register</span
+				>
+			</div>
 			<a href="index.html"><i class="fa-solid fa-house mr-2"></i>Home</a>
 			<a
 				><i class="fa-solid fa-list mr-2"></i
@@ -28,10 +35,16 @@
 				<div id="priceRange" class="hidden px-3 pb-3">
 					<span class="text-sm text-gray-600">
 						<div class="slidecontainer">
-							<a href="product_listing_page.html">ladies accessories</a>
-							<a href="product_listing_page.html">men's clothing</a>
-							<a href="product_listing_page.html">men's accessories</a>
-							<a href="product_listing_page.html">electonics accessories</a>
+							<a id="mobile_sidebar_ladies_accessories_category"
+								>ladies accessories</a
+							>
+							<a id="mobile_sidebar_mens_clothing_category">men's clothing</a>
+							<a id="mobile_sidebar_mens_accessories_category"
+								>men's accessories</a
+							>
+							<a id="mobile_sidebar_electonics_accessories_category"
+								>electonics accessories</a
+							>
 						</div>
 					</span>
 				</div>

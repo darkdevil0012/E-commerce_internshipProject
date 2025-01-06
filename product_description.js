@@ -11,7 +11,7 @@ const category_defining_span = document.getElementById(
 	"category_defining_span"
 );
 let currentIndex = 0;
-let cart = [];
+export let cart = [];
 let saveforlater = [];
 
 // Save cart to localStorage
